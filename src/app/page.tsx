@@ -49,7 +49,7 @@ export default function HomePage() {
           variants={containerVariants}
         >
           <motion.div 
-            className="bg-yellow-500 text-black py-8 px-6 md:p-10 flex flex-col gap-8 rounded-3xl lg:h-[756px] xl:h-[666px] lg:justify-center"
+            className="bg-blue-800/85 text-white py-8 px-6 md:p-10 flex flex-col gap-8 rounded-3xl lg:h-[756px] xl:h-[666px] lg:justify-center"
             variants={itemVariants}
           >
             <h1 className=" text-3xl md:text-5xl lg:text-6xl lg:mb-3 font-bold">

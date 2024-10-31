@@ -7,20 +7,20 @@ import * as motion from "framer-motion/client";
 
 const fadeInVariants = {
   hidden: { opacity: 0, x: -50 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     x: 0,
     transition: {
       duration: 0.8,
-      ease: "easeOut"
-    }
+      ease: "easeOut",
+    },
   },
 };
 
 export default function ServicesSection() {
   return (
     <section className="mx-4 mt-32 max-w-screen-xl xl:mx-24">
-      <motion.div 
+      <motion.div
         className="grid md:grid-cols-2 lg:grid-cols-[1.3fr,1fr,1fr] gap-8"
         initial="hidden"
         animate="visible"
@@ -31,7 +31,7 @@ export default function ServicesSection() {
           <ActionButtons />
         </div>
         {services.map((service, index) => (
-          <motion.div 
+          <motion.div
             key={service.title}
             variants={fadeInVariants}
             custom={index}
@@ -40,7 +40,7 @@ export default function ServicesSection() {
             <Card className="h-full">
               <CardContent className="flex flex-col h-full p-6">
                 <div className="flex items-start mb-4">
-                  <service.icon className="h-8 w-8 text-yellow-600 mr-4 flex-shrink-0" />
+                  <service.icon className="h-8 w-8 text-blue-800/85 mr-4 flex-shrink-0" />
                   <h3 className="text-xl font-semibold">{service.title}</h3>
                 </div>
                 <p className="text-gray-600 flex-grow">{service.description}</p>
@@ -50,7 +50,7 @@ export default function ServicesSection() {
         ))}
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className="md:col-span-2 lg:col-span-1 lg:row-span-2 lg:row-start-2 mt-8 lg:mt-0"
         initial="hidden"
         whileInView="visible"
