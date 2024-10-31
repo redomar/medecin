@@ -35,7 +35,8 @@ export default function HomePage() {
       <Header />
 
       <main
-        className="flex-grow md:flex-col md:justify-center"
+          className="flex-grow md:flex-col md:justify-center z-0"
+
         style={{
           background:
             "repeating-linear-gradient(to bottom, white 0px, white 445px,#00000005 445px,#00000005 1900px);",

@@ -6,7 +6,7 @@ import NavLinks from "./NavLinks";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 flex h-[5.265rem] items-center justify-between  bg-background px-4 md:px-6">
+    <header className="sticky top-0 z-50 flex h-[5.265rem] items-center justify-between bg-background px-4 md:px-6">
       <div className="flex items-center justify-left flex-1">
         <Hospital className="h-6 w-6 mr-2" />
         <span className="text-lg font-bold">Médecin À Domicile</span>

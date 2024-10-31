@@ -19,14 +19,13 @@ const fadeInVariants = {
 
 export default function ServicesSection() {
   return (
-    <motion.section 
-      className="mx-4 mt-32 max-w-screen-xl xl:mx-24"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-      variants={fadeInVariants}
-    >
-      <div className="grid md:grid-cols-2 lg:grid-cols-[1.3fr,1fr,1fr] gap-8">
+    <section className="mx-4 mt-32 max-w-screen-xl xl:mx-24">
+      <motion.div 
+        className="grid md:grid-cols-2 lg:grid-cols-[1.3fr,1fr,1fr] gap-8"
+        initial="hidden"
+        animate="visible"
+        variants={fadeInVariants}
+      >
         <div className="md:flex md:justify-between md:items-baseline md:col-span-2 lg:col-span-3 w-full">
           <h1 className="text-3xl lg:text-5xl">Our Services</h1>
           <ActionButtons />
@@ -49,21 +48,23 @@ export default function ServicesSection() {
             </Card>
           </motion.div>
         ))}
+      </motion.div>
 
-        <motion.div 
-          variants={fadeInVariants}
-          custom={services.length}
-          className="md:col-span-2 lg:col-span-1 lg:row-span-2 lg:row-start-2"
-        >
-          <Image
-            src="https://placehold.co/400x400/png"
-            alt="placeholder"
-            width={400}
-            height={400}
-            className="rounded-3xl w-full lg:h-[523px] lg:object-cover"
-          />
-        </motion.div>
-      </div>
-    </motion.section>
+      <motion.div 
+        className="md:col-span-2 lg:col-span-1 lg:row-span-2 lg:row-start-2 mt-8 lg:mt-0"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInVariants}
+      >
+        <Image
+          src="https://placehold.co/400x400/png"
+          alt="placeholder"
+          width={400}
+          height={400}
+          className="rounded-3xl w-full lg:h-[523px] lg:object-cover"
+        />
+      </motion.div>
+    </section>
   );
 }
