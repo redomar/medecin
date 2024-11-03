@@ -1,9 +1,12 @@
 // src/app/services/page.tsx
+"use client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import services from "@/data/services";
+import services_en, { services_fr } from "@/data/services";
 import * as motion from "framer-motion/client";
+import { useState } from "react";
+import ActionButtons from "@/components/ActionButtons";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -28,18 +31,26 @@ const itemVariants = {
 };
 
 export default function ServicesPage() {
+  const [isPublic, setIsPublic] = useState(true);
+  const services = isPublic ? services_en : services_fr;
+
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <Header />
+      <Header isPublic={isPublic} setIsPublic={setIsPublic} />
       <motion.main
-        className="flex-grow container mx-auto px-4 py-8"
+        className="flex-grow container mx-auto px-4 py-8 "
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        <motion.h1 className="text-3xl font-bold mb-8" variants={itemVariants}>
+        <div className="text-black mb-8 bg-blue-200/30 rounded-3xl w-full h-96 flex justify-center items-center flex-col">
+        <motion.h1 className="text-5xl font-bold text-black ">
           Our Services
+          
         </motion.h1>
+        <span>Get the best care for your health</span>
+          <ActionButtons  />
+          </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <motion.div key={service.title} variants={itemVariants}>

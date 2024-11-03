@@ -49,7 +49,7 @@ const items = [
 export default function WhyChooseUsSection() {
   return (
     <motion.section
-      className="mx-4 mt-32 max-w-screen-xl xl:mx-24"
+      className="mx-4 mt-32 max-w-screen-xl xl:mx-24 justify-self-center"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}

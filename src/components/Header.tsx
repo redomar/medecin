@@ -1,24 +1,29 @@
 // src/components/Header.tsx
-"use client";
-
-import { Hospital, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import Image from "next/image";
+import { Dispatch, SetStateAction } from "react";
+import ImgLogo from "../../public/images/logo.svg";
 import NavLinks from "./NavLinks";
-import { useState } from "react";
 
-export default function Header() {
-  const [isPublic, setIsPublic] = useState(true);
-
+export default function Header({
+  isPublic,
+  setIsPublic,
+}: {
+  isPublic: boolean;
+  setIsPublic: Dispatch<SetStateAction<boolean>>;
+}) {
   return (
     <header>
-      <div className="bg-blue-800 w-full justify-between px-14 py-6 hidden lg:flex text-white">
+      <div className="bg-blue-800 w-full max-w-full justify-between px-14 py-6 hidden lg:flex text-white items-baseline">
         <span>No. 1 Homecare Service in Mauritius</span>
+        <span></span>
         <div className="flex items-center gap-2">
           <div className="flex items-center bg-blue-700 rounded-full p-1">
             <button
               className={`px-3 py-1 rounded-full transition-all ${
-                isPublic ? 'bg-white text-blue-800' : 'text-white'
+                isPublic ? "bg-white text-blue-800" : "text-white"
               }`}
               onClick={() => setIsPublic(true)}
             >
@@ -26,7 +31,7 @@ export default function Header() {
             </button>
             <button
               className={`px-3 py-1 rounded-full transition-all ${
-                !isPublic ? 'bg-white text-blue-800' : 'text-white'
+                !isPublic ? "bg-white text-blue-800" : "text-white"
               }`}
               onClick={() => setIsPublic(false)}
             >
@@ -38,14 +43,20 @@ export default function Header() {
         <span>Hotline: 86121</span>
       </div>
       <div className="sticky top-0 z-50 flex h-[5.265rem] items-center justify-between bg-background px-4 md:px-6">
-        {/* Rest of the component remains the same */}
-        <div className="flex items-center justify-left flex-1">
-          <Hospital className="h-6 w-6 mr-2" />
-          <span className="text-lg font-bold">Médecin À Domicile</span>
+        <nav className="hidden md:flex md:items-center md:gap-5 lg:gap-6">
+          <NavLinks part={1} />
+        </nav>
+
+        <div className="flex items-center justify-center flex-1 h-full">
+          <Image
+            src={ImgLogo}
+            alt="Home Doctor Logo"
+            className="relative mr-10"
+          />
         </div>
 
         <nav className="hidden md:flex md:items-center md:gap-5 lg:gap-6">
-          <NavLinks />
+          <NavLinks part={2} />
         </nav>
 
         <div className="flex items-center md:hidden">
