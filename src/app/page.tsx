@@ -8,6 +8,8 @@ import ServicesSection from "@/components/ServicesSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import * as motion from "framer-motion/client";
 import { useState } from "react";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 import image001 from "../../public/images/image001.jpg";
 import image002 from "../../public/images/image002.jpg";
 // import image003 from "../../public/images/image003.jpg";
@@ -39,6 +41,16 @@ const itemVariants = {
 export default function HomePage() {
   const [isPublic, setIsPublic] = useState(true);
 
+  // Create refs for each section
+  const heroRef = useRef(null);
+  const teamRef = useRef(null);
+  const contactRef = useRef(null);
+
+  // Check if sections are in view
+  const heroInView = useInView(heroRef, { once: false });
+  const teamInView = useInView(teamRef, { once: false });
+  const contactInView = useInView(contactRef, { once: false });
+
   return (
     <div className="flex flex-col min-h-screen bg-white ">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
@@ -48,11 +60,12 @@ export default function HomePage() {
             "repeating-linear-gradient(to bottom, white 0px, white 445px,#00000007 445px,#00000007 1900px)",
         }}
       >
-        <main className="flex-grow md:flex-col md:justify-center z-0 px-4 md:mx-32">
+        <main className="flex-grow md:flex-col md:justify-center z-0 px-4 xl:mx-32">
           <motion.section
-            className="mt-5 grid max-w-screen-xl grid-cols-1 gap-8 justify-self-center  lg:grid-cols-2 xl:justify-center"
+            ref={heroRef}
+            className="mt-5 grid max-w-screen-xl grid-cols-1 gap-8 justify-self-center lg:grid-cols-2 xl:justify-center"
             initial="hidden"
-            animate="visible"
+            animate={heroInView ? "visible" : "hidden"}
             variants={containerVariants}
           >
             <motion.div
@@ -81,7 +94,13 @@ export default function HomePage() {
 
           {isPublic ? <ServicesSection /> : <WhyChooseUsSection />}
 
-          <motion.section className="mt-32 max-w-screen-xl w-full justify-self-center flex flex-col gap-8">
+          <motion.section
+            ref={teamRef}
+            className="mt-32 max-w-screen-xl w-full justify-self-center flex flex-col gap-8"
+            initial="hidden"
+            animate={teamInView ? "visible" : "hidden"}
+            variants={containerVariants}
+          >
             <div className="md:flex md:justify-between md:items-baseline md:col-span-2 lg:col-span-3 w-full">
               <span className="flex flex-col gap-3 ">
                 <h1 className="text-3xl lg:text-5xl">Our Professional Team</h1>
@@ -121,8 +140,15 @@ export default function HomePage() {
             </motion.div>
           </motion.section>
 
-          <motion.section className="hidden lg:flex mt-32 md:max-w-screen-lg xl:max-w-screen-xl lg:px-10 xl:px-20 w-full justify-self-center  flex-row gap-8 h-full">
-            <div className="relative w-full h-full my-64">
+          <motion.section
+            ref={contactRef}
+            className="hidden lg:flex mt-32 md:max-w-screen-lg xl:max-w-screen-xl lg:px-10 xl:px-20 w-full justify-self-center flex-row gap-8 h-full"
+            initial="hidden"
+            animate={contactInView ? "visible" : "hidden"}
+            variants={containerVariants}
+          >
+            <motion.div
+              variants={itemVariants} className="relative w-full h-full my-64">
               <Image
                 src="https://picsum.photos/301/300/"
                 alt="placeholder"
@@ -152,7 +178,7 @@ export default function HomePage() {
                 height={300}
                 className="rounded-3xl hidden lg:object-cover h-[300px] w-[300px] absolute md:block -bottom-48 xl:-bottom-20 right-0 xl:-right-20"
               />
-            </div>
+            </motion.div>
           </motion.section>
           {/* <motion.section className=" max-w-screen-xl w-full justify-self-center flex flex-col gap-8 h-full">
           <div className="flex flex-col items-center gap-2 w-full">

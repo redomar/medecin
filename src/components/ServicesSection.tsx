@@ -5,11 +5,21 @@ import ActionButtons from "./ActionButtons";
 import services from "@/data/services";
 import * as motion from "framer-motion/client";
 
-const fadeInVariants = {
-  hidden: { opacity: 0, x: -50 },
+const containerVariants = {
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    x: 0,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const fadeInVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
     transition: {
       duration: 0.8,
       ease: "easeOut",
@@ -19,22 +29,42 @@ const fadeInVariants = {
 
 export default function ServicesSection() {
   return (
-    <section className="mt-32 max-w-screen-xl justify-self-center">
+    <motion.section 
+      className="mt-32 max-w-screen-xl justify-self-center"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.1 }}
+      variants={containerVariants}
+    >
       <motion.div
         className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.3fr,1fr,1fr]"
-        initial="hidden"
-        animate="visible"
-        variants={fadeInVariants}
+        variants={containerVariants}
       >
-        <div className="w-full md:col-span-2 md:flex md:items-baseline md:justify-between lg:col-span-3">
+        <motion.div 
+          variants={fadeInVariants}
+          className="w-full md:col-span-2 md:flex md:items-baseline md:justify-between lg:col-span-3"
+        >
           <h1 className="text-3xl font-medium lg:text-5xl">Our Services</h1>
           <ActionButtons />
-        </div>
+        </motion.div>
+
+        <motion.div 
+          variants={fadeInVariants}
+          className="w-full rounded-3xl md:col-span-2 lg:col-auto lg:row-span-2 lg:row-start-2"
+        >
+          <Image
+            src="https://picsum.photos/901/901/"
+            alt="placeholder"
+            width={900}
+            height={900}
+            className="w-full rounded-3xl lg:h-[523px] lg:object-cover"
+          />
+        </motion.div>
+
         {services.map((service, index) => (
           <motion.div
             key={service.title}
             variants={fadeInVariants}
-            custom={index}
             className="lg:col-span-1"
           >
             <Card className="h-full">
@@ -52,15 +82,7 @@ export default function ServicesSection() {
             </Card>
           </motion.div>
         ))}
-
-        <Image
-          src="https://picsum.photos/901/901/"
-          alt="placeholder"
-          width={900}
-          height={900}
-          className="w-full rounded-3xl md:col-span-2 lg:col-auto lg:row-span-2 lg:row-start-2 lg:h-[523px] lg:object-cover"
-        />
       </motion.div>
-    </section>
+    </motion.section>
   );
 }
