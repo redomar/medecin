@@ -8,6 +8,11 @@ import ServicesSection from "@/components/ServicesSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import * as motion from "framer-motion/client";
 import { useState } from "react";
+import image001 from "../../public/images/image001.jpg";
+import image002 from "../../public/images/image002.jpg";
+// import image003 from "../../public/images/image003.jpg";
+import image004 from "../../public/images/image004.jpg";
+import image005 from "../../public/images/image005.jpg";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -65,7 +70,7 @@ export default function HomePage() {
             </motion.div>
             <motion.div variants={itemVariants}>
               <Image
-                src="https://picsum.photos/1400/1400/"
+                src={image001}
                 alt="placeholder"
                 width={1400}
                 height={1400}
@@ -90,28 +95,28 @@ export default function HomePage() {
             </div>
             <motion.div
               variants={itemVariants}
-              className="flex flex-col md:flex-row gap-8 w-full"
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 relative w-full"
             >
               <Image
-                src="https://picsum.photos/800/801/"
+                src={image004}
                 alt="placeholder"
-                width={800}
-                height={800}
-                className="rounded-3xl w-full lg:object-cover"
+                width={250}
+                height={250}
+                className="rounded-3xl w-full h-auto object-cover"
               />
               <Image
-                src="https://picsum.photos/801/800/"
+                src={image005}
                 alt="placeholder"
-                width={800}
-                height={800}
-                className="rounded-3xl w-full lg:object-cover"
+                width={250}
+                height={250}
+                className="rounded-3xl w-full h-auto object-cover"
               />
               <Image
-                src="https://picsum.photos/800/800/"
+                src={image002}
                 alt="placeholder"
-                width={800}
-                height={800}
-                className="rounded-3xl w-full lg:object-cover"
+                width={250}
+                height={250}
+                className="rounded-3xl w-full h-auto object-cover"
               />
             </motion.div>
           </motion.section>

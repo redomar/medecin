@@ -65,7 +65,7 @@ export default function Header({
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="shrink-0">
-                <Menu className="w-7" h-7 />
+                <Menu className="size-7" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
