@@ -21,13 +21,13 @@ export default function ServicesSection() {
   return (
     <section className="mt-32 max-w-screen-xl justify-self-center">
       <motion.div
-        className="grid md:grid-cols-2 lg:grid-cols-[1.3fr,1fr,1fr] gap-8"
+        className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.3fr,1fr,1fr]"
         initial="hidden"
         animate="visible"
         variants={fadeInVariants}
       >
-        <div className="md:flex md:justify-between md:items-baseline md:col-span-2 lg:col-span-3 w-full">
-          <h1 className="text-3xl lg:text-5xl">Our Services</h1>
+        <div className="w-full md:col-span-2 md:flex md:items-baseline md:justify-between lg:col-span-3">
+          <h1 className="text-3xl font-medium lg:text-5xl">Our Services</h1>
           <ActionButtons />
         </div>
         {services.map((service, index) => (
@@ -38,12 +38,16 @@ export default function ServicesSection() {
             className="lg:col-span-1"
           >
             <Card className="h-full">
-              <CardContent className="flex flex-col h-full p-6">
-                <div className="flex items-start mb-4">
-                  <service.icon className="h-8 w-8 text-blue-800/85 mr-4 flex-shrink-0" />
-                  <h3 className="text-xl font-semibold">{service.title}</h3>
+              <CardContent className="flex h-full flex-col gap-4 p-6">
+                <span className="flex size-12 rounded-full bg-blue-800/10 p-3">
+                  <service.icon className="mr-4 h-full w-full flex-shrink-0 text-blue-800/85" />
+                </span>
+                <div className="flex items-start">
+                  <h3 className="content-center text-xl font-bold">
+                    {service.title}
+                  </h3>
                 </div>
-                <p className="text-gray-600 flex-grow">{service.description}</p>
+                <p className="flex-grow font-medium tracking-wide text-gray-600">{service.description}</p>
               </CardContent>
             </Card>
           </motion.div>
@@ -54,7 +58,7 @@ export default function ServicesSection() {
           alt="placeholder"
           width={900}
           height={900}
-          className="rounded-3xl w-full lg:h-[523px] md:col-span-2 lg:col-auto lg:object-cover lg:row-span-2 lg:row-start-2"
+          className="w-full rounded-3xl md:col-span-2 lg:col-auto lg:row-span-2 lg:row-start-2 lg:h-[523px] lg:object-cover"
         />
       </motion.div>
     </section>

@@ -16,38 +16,40 @@ export default function Header({
 }) {
   return (
     <header>
-      <div className="bg-blue-800 w-full max-w-full justify-between px-14 py-6 hidden lg:flex text-white items-baseline">
-        <span>No. 1 Homecare Service in Mauritius</span>
-        <span></span>
-        <div className="flex items-center gap-2">
-          <div className="flex items-center bg-blue-700 rounded-full p-1">
-            <button
-              className={`px-3 py-1 rounded-full transition-all ${
-                isPublic ? "bg-white text-blue-800" : "text-white"
-              }`}
-              onClick={() => setIsPublic(true)}
-            >
-              Public
-            </button>
-            <button
-              className={`px-3 py-1 rounded-full transition-all ${
-                !isPublic ? "bg-white text-blue-800" : "text-white"
-              }`}
-              onClick={() => setIsPublic(false)}
-            >
-              Corporate
-            </button>
+      <div className="hidden max-w-full bg-blue-800  px-14 text-white md:px-32 lg:flex">
+        <div className="flex w-full items-baseline justify-between px-6 py-6">
+          <span>No. 1 Homecare Service in Mauritius</span>
+          <span></span>
+          <div className="flex items-center gap-2">
+            <div className="flex items-center rounded-full bg-blue-700 p-1">
+              <button
+                className={`px-3 rounded-full py-1 transition-all ${
+                  isPublic ? "bg-white text-blue-800" : "text-white"
+                }`}
+                onClick={() => setIsPublic(true)}
+              >
+                Public
+              </button>
+              <button
+                className={`px-3 rounded-full py-1 transition-all ${
+                  !isPublic ? "bg-white text-blue-800" : "text-white"
+                }`}
+                onClick={() => setIsPublic(false)}
+              >
+                Corporate
+              </button>
+            </div>
           </div>
+          <span>Emergency: 193</span>
+          <span>Hotline: 86121</span>
         </div>
-        <span>Emergency: 193</span>
-        <span>Hotline: 86121</span>
       </div>
-      <div className="sticky top-0 z-50 flex h-[5.265rem] items-center justify-between bg-background px-4 md:px-6">
-        <nav className="hidden md:flex md:items-center md:gap-5 lg:gap-6">
+      <div className="sticky top-0 z-50 flex h-[5.265rem] items-center justify-between bg-background px-4 md:mx-32 md:px-6">
+        <nav className="hidden font-medium md:flex md:items-center md:gap-5 lg:gap-6">
           <NavLinks part={1} />
         </nav>
 
-        <div className="flex items-center justify-center flex-1 h-full">
+        <div className="flex h-full flex-1 items-center justify-center">
           <Image
             src={ImgLogo}
             alt="Home Doctor Logo"
@@ -55,7 +57,7 @@ export default function Header({
           />
         </div>
 
-        <nav className="hidden md:flex md:items-center md:gap-5 lg:gap-6">
+        <nav className="hidden font-medium md:flex md:items-center md:gap-5 lg:gap-6">
           <NavLinks part={2} />
         </nav>
 
@@ -63,7 +65,7 @@ export default function Header({
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="shrink-0">
-                <Menu className="h-7 w-7" />
+                <Menu className="w-7" h-7 />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>

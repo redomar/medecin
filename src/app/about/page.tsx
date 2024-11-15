@@ -34,11 +34,26 @@ const metrics = [
 ];
 
 const services = [
-  { title: "Primary Care", description: "Comprehensive health assessments and ongoing care" },
-  { title: "Specialist Referrals", description: "Direct access to specialist networks" },
-  { title: "Home Visits", description: "Medical care in the comfort of your home" },
-  { title: "Preventive Care", description: "Regular check-ups and health screenings" },
-  { title: "Chronic Disease Management", description: "Ongoing support for long-term conditions" },
+  {
+    title: "Primary Care",
+    description: "Comprehensive health assessments and ongoing care",
+  },
+  {
+    title: "Specialist Referrals",
+    description: "Direct access to specialist networks",
+  },
+  {
+    title: "Home Visits",
+    description: "Medical care in the comfort of your home",
+  },
+  {
+    title: "Preventive Care",
+    description: "Regular check-ups and health screenings",
+  },
+  {
+    title: "Chronic Disease Management",
+    description: "Ongoing support for long-term conditions",
+  },
   { title: "Telemedicine", description: "Remote consultations when needed" },
 ];
 
@@ -48,7 +63,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
-      
+
       <motion.main
         className="flex-grow container mx-auto px-4 py-8"
         initial="hidden"
@@ -57,12 +72,18 @@ export default function AboutPage() {
       >
         {/* Section 1 */}
         <motion.section className="grid md:grid-cols-2 gap-16 mb-32">
-          <motion.div variants={itemVariants} className="flex flex-col justify-center">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">Providing Quality Healthcare Since 2008</h1>
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-col justify-center"
+          >
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+              Providing Quality Healthcare Since 2008
+            </h1>
             <p className="text-gray-600">
-              At Medecin Clinic, we believe in delivering exceptional healthcare services with a personal touch. 
-              Our team of dedicated professionals works tirelessly to ensure every patient receives the highest 
-              standard of medical care.
+              At Medecin Clinic, we believe in delivering exceptional healthcare
+              services with a personal touch. Our team of dedicated
+              professionals works tirelessly to ensure every patient receives
+              the highest standard of medical care.
             </p>
           </motion.div>
           <motion.div variants={itemVariants}>
@@ -86,12 +107,15 @@ export default function AboutPage() {
               className="rounded-3xl"
             />
           </motion.div>
-          <motion.div variants={itemVariants} className="flex flex-col justify-center">
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-col justify-center"
+          >
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our Mission</h2>
             <p className="text-gray-600">
-              We strive to make quality healthcare accessible to all, combining modern medical practices 
-              with compassionate care. Our approach focuses on treating not just the symptoms, but the 
-              whole person.
+              We strive to make quality healthcare accessible to all, combining
+              modern medical practices with compassionate care. Our approach
+              focuses on treating not just the symptoms, but the whole person.
             </p>
           </motion.div>
         </motion.section>
@@ -113,7 +137,9 @@ export default function AboutPage() {
                   variants={itemVariants}
                   className="bg-white p-8 rounded-xl shadow-lg text-center min-w-[200px]"
                 >
-                  <h3 className="text-4xl font-bold text-blue-800">{metric.number}</h3>
+                  <h3 className="text-4xl font-bold text-blue-800">
+                    {metric.number}
+                  </h3>
                   <p className="text-gray-600 mt-2">{metric.label}</p>
                 </motion.div>
               ))}
@@ -123,7 +149,9 @@ export default function AboutPage() {
 
         {/* Section 3 - Services Grid */}
         <motion.section className="mt-32 mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center">What We Do</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center">
+            What We Do
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div

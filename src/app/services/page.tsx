@@ -44,13 +44,12 @@ export default function ServicesPage() {
         variants={containerVariants}
       >
         <div className="text-black mb-8 bg-blue-200/30 rounded-3xl w-full h-96 flex justify-center items-center flex-col">
-        <motion.h1 className="text-5xl font-bold text-black ">
-          Our Services
-          
-        </motion.h1>
-        <span>Get the best care for your health</span>
-          <ActionButtons  />
-          </div>
+          <motion.h1 className="text-5xl font-bold text-black ">
+            Our Services
+          </motion.h1>
+          <span>Get the best care for your health</span>
+          <ActionButtons />
+        </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <motion.div key={service.title} variants={itemVariants}>
