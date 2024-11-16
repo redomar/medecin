@@ -29,7 +29,7 @@ const fadeInVariants = {
 
 export default function ServicesSection() {
   return (
-    <motion.section 
+    <motion.section
       className="mt-32 max-w-screen-xl justify-self-center"
       initial="hidden"
       whileInView="visible"
@@ -37,10 +37,10 @@ export default function ServicesSection() {
       variants={containerVariants}
     >
       <motion.div
-        className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.3fr,1fr,1fr]"
+        className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.3fr,1fr,1fr] "
         variants={containerVariants}
       >
-        <motion.div 
+        <motion.div
           variants={fadeInVariants}
           className="w-full md:col-span-2 md:flex md:items-baseline md:justify-between lg:col-span-3"
         >
@@ -48,7 +48,7 @@ export default function ServicesSection() {
           <ActionButtons />
         </motion.div>
 
-        <motion.div 
+        <motion.div
           variants={fadeInVariants}
           className="w-full rounded-3xl md:col-span-2 lg:col-auto lg:row-span-2 lg:row-start-2"
         >
@@ -57,11 +57,11 @@ export default function ServicesSection() {
             alt="placeholder"
             width={900}
             height={900}
-            className="w-full rounded-3xl lg:h-[523px] lg:object-cover"
+            className="w-full rounded-3xl lg:h-full lg:object-cover"
           />
         </motion.div>
 
-        {services.map((service, index) => (
+        {services.slice(0, 4).map((service) => (
           <motion.div
             key={service.title}
             variants={fadeInVariants}
@@ -77,7 +77,9 @@ export default function ServicesSection() {
                     {service.title}
                   </h3>
                 </div>
-                <p className="flex-grow font-medium tracking-wide text-gray-600">{service.description}</p>
+                <p className="flex-grow font-medium tracking-wide text-gray-600">
+                  {service.description}
+                </p>
               </CardContent>
             </Card>
           </motion.div>

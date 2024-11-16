@@ -10,14 +10,14 @@ export default function Footer() {
           <div className="absolute top-32 hidden h-full w-full flex-col justify-between gap-4 rounded-3xl bg-blue-800 p-8 lg:flex">
             <span>
               {" "}
-              <h1 className="self-start text-3xl font-semibold">
+              <h1 className="self-start text-4xl font-semibold">
                 You stay at home
               </h1>
-              <h1 className="self-start text-3xl font-semibold ml-16 mt-2">
+              <h1 className="self-start text-4xl font-semibold ml-16 mt-2">
                 We come to you
               </h1>
             </span>
-            <ActionButtons variant="" />
+            <ActionButtons variant="" toShowSecondButton={false} />
           </div>
         </div>
         <div className="relative w-[500px] text-black">
@@ -26,12 +26,12 @@ export default function Footer() {
               We’re here for you when you need us.
             </h2>
             <span className="flex flex-col sm:flex-row gap-4 mt-6">
-            <Button
-              variant="secondary"
-              className={`text-md w-full rounded-full bg-blue-800/85 px-8 py-6 font-extrabold text-white sm:w-auto`}
-            >
-              Contact Us
-            </Button>
+              <Button
+                variant="secondary"
+                className={`text-md w-full rounded-full bg-blue-800/85 px-8 py-6 font-extrabold text-white sm:w-auto`}
+              >
+                Contact Us
+              </Button>
             </span>
           </div>
         </div>

@@ -62,35 +62,42 @@ export default function DoctorsPage() {
     <div className="flex flex-col min-h-screen bg-white">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
       <motion.main
-        className="flex-grow container mx-auto px-4 py-8"
+        className="flex-grow md:flex-col md:justify-center z-0 px-4 xl:mx-32"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        <motion.h1 className="text-3xl font-bold mb-8" variants={itemVariants}>
-          Our Doctors
-        </motion.h1>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {doctors.map((doctor) => (
-            <motion.div key={doctor.name} variants={itemVariants}>
-              <Card className="h-full">
-                <CardContent className="p-6 flex flex-col items-center">
-                  <Image
-                    src={doctor.image}
-                    alt={doctor.name}
-                    width={200}
-                    height={200}
-                    className="rounded-full mb-4"
-                  />
-                  <h2 className="text-xl font-semibold mb-2">{doctor.name}</h2>
-                  <h3 className="text-lg text-gray-600 mb-2">
-                    {doctor.specialty}
-                  </h3>
-                  <p className="text-gray-700 text-center">{doctor.bio}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+        <div className="mx-auto max-w-screen-xl">
+          <motion.h1
+            className="text-3xl font-bold mb-8"
+            variants={itemVariants}
+          >
+            Our Doctors
+          </motion.h1>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {doctors.map((doctor) => (
+              <motion.div key={doctor.name} variants={itemVariants}>
+                <Card className="h-full">
+                  <CardContent className="p-6 flex flex-col items-center">
+                    <Image
+                      src={doctor.image}
+                      alt={doctor.name}
+                      width={200}
+                      height={200}
+                      className="rounded-full mb-4"
+                    />
+                    <h2 className="text-xl font-semibold mb-2">
+                      {doctor.name}
+                    </h2>
+                    <h3 className="text-lg text-gray-600 mb-2">
+                      {doctor.specialty}
+                    </h3>
+                    <p className="text-gray-700 text-center">{doctor.bio}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </motion.main>
       <Footer />

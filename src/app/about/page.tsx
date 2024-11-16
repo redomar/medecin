@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import * as motion from "framer-motion/client";
 import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -65,13 +66,13 @@ export default function AboutPage() {
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
 
       <motion.main
-        className="flex-grow container mx-auto px-4 py-8"
+        className="flex-grow md:flex-col md:justify-center z-0 px-4 xl:mx-32"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
         {/* Section 1 */}
-        <motion.section className="grid md:grid-cols-2 gap-16 mb-32">
+        <motion.section className="mx-auto mb-32 grid max-w-screen-xl gap-16 md:grid-cols-2">
           <motion.div
             variants={itemVariants}
             className="flex flex-col justify-center"
@@ -97,7 +98,7 @@ export default function AboutPage() {
           </motion.div>
         </motion.section>
 
-        <motion.section className="grid md:grid-cols-2 gap-16 mb-32">
+        <motion.section className="mx-auto grid max-w-screen-xl gap-16 md:grid-cols-2">
           <motion.div variants={itemVariants}>
             <Image
               src="https://picsum.photos/801/600"
@@ -121,7 +122,7 @@ export default function AboutPage() {
         </motion.section>
 
         {/* Section 2 - Stats */}
-        <motion.section className="mb-32 relative">
+        <motion.section className="relative mx-auto my-32 max-w-screen-xl">
           <Image
             src="https://picsum.photos/1600/600"
             alt="Medical facility wide"
@@ -130,7 +131,7 @@ export default function AboutPage() {
             className="rounded-3xl w-full h-[400px] object-cover"
           />
           <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2">
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-8">
               {metrics.map((metric, index) => (
                 <motion.div
                   key={index}
@@ -148,19 +149,23 @@ export default function AboutPage() {
         </motion.section>
 
         {/* Section 3 - Services Grid */}
-        <motion.section className="mt-32 mb-16">
+        <motion.section className="mx-auto mb-16 mt-40 max-w-screen-xl rounded-3xl bg-[#00000007] p-4">
           <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center">
             What We Do
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <motion.div
-                key={index}
-                variants={itemVariants}
-                className="bg-gray-50 p-8 rounded-xl"
+                key={service.title}
+                //  variants={fadeInVariants}
+                className="lg:col-span-1"
               >
-                <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <Card className="h-full">
+                  <CardContent className="flex h-full flex-col gap-4 p-6">
+                    <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+                    <p className="text-gray-600">{service.description}</p>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>

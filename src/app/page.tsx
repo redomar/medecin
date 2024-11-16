@@ -92,18 +92,30 @@ export default function HomePage() {
             </motion.div>
           </motion.section>
 
-          {isPublic ? <ServicesSection /> : <WhyChooseUsSection />}
+          {!isPublic ? (
+            <>
+              <ServicesSection />
+              <WhyChooseUsSection />
+            </>
+          ) : (
+            <>
+              <WhyChooseUsSection />
+              <ServicesSection />
+            </>
+          )}
 
           <motion.section
             ref={teamRef}
-            className="mt-32 max-w-screen-xl w-full justify-self-center flex flex-col gap-8"
+            className="mt-20 max-w-screen-xl w-full justify-self-center flex flex-col gap-8"
             initial="hidden"
             animate={teamInView ? "visible" : "hidden"}
             variants={containerVariants}
           >
             <div className="md:flex md:justify-between md:items-baseline md:col-span-2 lg:col-span-3 w-full">
               <span className="flex flex-col gap-3 ">
-                <h1 className="text-3xl lg:text-5xl">Our Professional Team</h1>
+                <h1 className="text-3xl font-medium lg:text-5xl">
+                  Our Professional Team
+                </h1>
                 <span className="text-gray-600 font-thin">
                   Our team of expert GPs is dedicated to your well-being.
                 </span>
@@ -148,7 +160,9 @@ export default function HomePage() {
             variants={containerVariants}
           >
             <motion.div
-              variants={itemVariants} className="relative w-full h-full my-64">
+              variants={itemVariants}
+              className="relative w-full h-full my-64"
+            >
               <Image
                 src="https://picsum.photos/301/300/"
                 alt="placeholder"

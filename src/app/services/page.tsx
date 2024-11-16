@@ -35,31 +35,31 @@ export default function ServicesPage() {
   const services = isPublic ? services_en : services_fr;
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex min-h-screen flex-col bg-[#00000007]">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
       <motion.main
-        className="flex-grow container mx-auto px-4 py-8 "
+        className="flex-grow md:flex-col md:justify-center z-0 px-4 xl:mx-32"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        <div className="text-black mb-8 bg-blue-200/30 rounded-3xl w-full h-96 flex justify-center items-center flex-col">
-          <motion.h1 className="text-5xl font-bold text-black ">
+        <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-blue-200/30 text-black">
+          <motion.h1 className="text-5xl font-bold text-black">
             Our Services
           </motion.h1>
           <span>Get the best care for your health</span>
-          <ActionButtons />
+          <ActionButtons toShowSecondButton={false} />
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-screen-xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <motion.div key={service.title} variants={itemVariants}>
               <Card className="h-full">
-                <CardContent className="p-6 flex flex-col items-center">
-                  <service.icon className="h-12 w-12 text-blue-800/85 mb-4" />
-                  <h2 className="text-xl font-semibold mb-2">
+                <CardContent className="flex flex-col items-center p-6">
+                  <service.icon className="mb-4 h-12 w-12 text-blue-800/85" />
+                  <h2 className="mb-2 text-xl font-semibold">
                     {service.title}
                   </h2>
-                  <p className="text-gray-700 text-center">
+                  <p className="text-center text-gray-700">
                     {service.description}
                   </p>
                 </CardContent>

@@ -69,6 +69,7 @@ const faqs = [
   },
 ];
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const faqs_fr = [
   {
     question: "Quels sont vos horaires d'ouverture?",
@@ -107,14 +108,17 @@ export default function ContactPage() {
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
 
       <motion.main
-        className="flex-grow container mx-auto px-4 py-8"
+        className="z-0 flex-grow px-4 md:flex-col md:justify-center xl:mx-32"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
         {/* Section 1 - Contact Form */}
-        <motion.section className="grid md:grid-cols-2 gap-16 mb-32">
-          <motion.div variants={itemVariants} className="flex flex-col">
+        <motion.section className="mx-auto mb-32 grid max-w-screen-xl gap-16 md:grid-cols-2">
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-col justify-center"
+          >
             <h1 className="text-4xl font-bold mb-8">Contactez-nous</h1>
             <form className="flex flex-col gap-4">
               <input
@@ -157,7 +161,7 @@ export default function ContactPage() {
         </motion.section>
 
         {/* Section 2 - Location */}
-        <motion.section className="grid md:grid-cols-2 gap-16 mb-32">
+        <motion.section className="mx-auto mb-32 grid max-w-screen-xl gap-16 md:grid-cols-2">
           <motion.div variants={itemVariants}>
             <Image
               src="https://picsum.photos/801/600"
@@ -190,11 +194,11 @@ export default function ContactPage() {
         </motion.section>
 
         {/* Section 3 - FAQ */}
-        <motion.section className="mb-32">
+        <motion.section className="mx-auto mb-32 max-w-screen-xl">
           <h2 className="text-3xl font-bold mb-12 text-center">
             Frequently Asked Questions
           </h2>
-          <div className="max-w-2xl mx-auto space-y-4">
+          <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}

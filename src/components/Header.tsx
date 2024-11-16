@@ -44,7 +44,7 @@ export default function Header({
           <span>Hotline: 86121</span>
         </div>
       </div>
-      <div className="sticky top-0 z-50 flex h-[5.265rem] items-center justify-between bg-background px-4 md:mx-32 md:px-6">
+      <div className="sticky top-0 z-50 flex h-[5.265rem] items-center justify-between  px-4 md:mx-32 md:px-6">
         <nav className="hidden font-medium md:flex md:items-center md:gap-5 lg:gap-6">
           <NavLinks part={1} />
         </nav>
