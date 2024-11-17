@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import * as motion from "framer-motion/client";
 import { useState } from "react";
+import ActionButtons from "@/components/ActionButtons";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -68,12 +69,13 @@ export default function DoctorsPage() {
         variants={containerVariants}
       >
         <div className="mx-auto max-w-screen-xl">
-          <motion.h1
-            className="text-3xl font-bold mb-8"
-            variants={itemVariants}
-          >
+        <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-blue-200/30 text-black">
+          <motion.h1 className="text-5xl font-bold text-black">
             Our Doctors
           </motion.h1>
+          <span>Get the best care for your health</span>
+          <ActionButtons toShowSecondButton={false} />
+        </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {doctors.map((doctor) => (
               <motion.div key={doctor.name} variants={itemVariants}>

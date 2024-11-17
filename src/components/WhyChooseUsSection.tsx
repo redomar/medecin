@@ -106,7 +106,7 @@ export default function WhyChooseUsSection() {
           <motion.div
             key={index}
             variants={itemVariants}
-            className="border-r last:border-r-0 border-blue-800/20 *:p-6 md:*:first:pl-0"
+            className="border-blue-800/20 *:p-6 last:border-r-0 md:border-r md:*:first:pl-0"
           >
             <div className="h-full pb-6 flex flex-col">
               <div className="flex flex-col items-start h-full">
