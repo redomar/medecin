@@ -1,6 +1,6 @@
 // src/components/WhyChooseUsSection.tsx
 import { Card, CardContent } from "@/components/ui/card";
-import { Stethoscope, Calendar, Clipboard, Bandage, Bed, Syringe, UserCog } from "lucide-react";
+import { Stethoscope, Calendar, Clipboard, Bandage, Bed, Syringe, Sparkle, PhoneCall, Star } from "lucide-react";
 import * as motion from "framer-motion/client";
 import ActionButtons from "./ActionButtons";
 
@@ -28,22 +28,21 @@ const itemVariants = {
 
 const items = [
   {
-    icon: Stethoscope,
-    title: "Expert GPs",
+    icon: PhoneCall,
+    title: "24/7 Consultation & Hotline",
     description:
-      "Our team consists of highly qualified and experienced general practitioners. We are dedicated to your well-being.",
+      "We provide homecare 24/7, ensuring medical support is always available when you need it. Our team works tirelessly around the clock, offering the best and most empathetic care.",
   },
   {
-    icon: Calendar,
-    title: "Easy Scheduling",
-    description:
-      "Book your appointments online or by phone at your convenience and we will do our best to accommodate your schedule.",
+    icon: Star,
+    title: "5 star rating",
+    description: "Our 5-star rating reflects our unwavering commitment to providing exceptional care and service. We consistently exceed expectations, earning the satisfaction of all clients we serve.",
   },
   {
-    icon: Clipboard,
-    title: "Comprehensive Care",
+    icon: Sparkle,
+    title: "96% of our clients recommend us",
     description:
-      "From preventive care to managing chronic conditions, we provide full medical support to ensure your well-being.",
+      "With 96% of our clients recommending us, we pride ourselves on delivering top-quality care, building a personal bond with our patients based on sympathy.",
   },
 ];
 
@@ -65,10 +64,8 @@ export default function WhyChooseUsSection() {
             Why Choose Us?
           </motion.h1>
           <p className="text-gray-600 font-light">
-            At Medecin Clinic, we believe in delivering exceptional healthcare
-            services with a personal touch. Our team of dedicated professionals
-            works tirelessly to ensure every patient receives the highest
-            standard of medical care.
+          Choose us for 24/7 consultation and a dedicated hotline. With a 5-star rating and 96% of our clients recommending us, we are the no. 1 homecare service in mauritius.
+
           </p>
           <ActionButtons />
         </div>

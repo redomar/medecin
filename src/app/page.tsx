@@ -108,11 +108,12 @@ export default function HomePage() {
               variants={itemVariants}
             >
               <h1 className="text-3xl font-semibold md:text-5xl lg:mb-3 lg:text-6xl">
-                Personalised Care with Professional Support
+                Compassionate Care, Right at Home.
               </h1>
               <p className="lg:text-lg font-semibold">
-                Experience comprehensive and compassionate healthcare at Medecin
-                Clinic. Our team of expert GPs is dedicated to your well-being.
+                We’re here for you 24/7, offering the best care Mauritius has to
+                offer. With a deep trust and compassion, we’re committed to
+                supporting your well-being every step of the way, like family
               </p>
               <ActionButtons variant="" />
             </motion.div>
@@ -140,10 +141,10 @@ export default function HomePage() {
             <div className="md:flex md:justify-between md:items-baseline md:col-span-2 lg:col-span-3 w-full">
               <span className="flex flex-col gap-3 ">
                 <h1 className="text-3xl font-medium lg:text-5xl">
-                  Our Professional Team
+                  Our Medical Heroes
                 </h1>
                 <span className="text-gray-600 font-light">
-                  Our team of expert GPs is dedicated to your well-being.
+                We are a team of experienced, registered doctors dedicated to bringing healthcare to you
                 </span>
               </span>
               <div className="flex justify-center gap-2">
@@ -199,14 +200,10 @@ export default function HomePage() {
               <div className="w-full h-full px-20">
                 <div className="bg-blue-800/85 text-white h-[460px] w-full p-2gap-8 rounded-3xl flex flex-col justify-center items-center">
                   <h2 className=" text-2xl md:text-4xl lg:text-5xl text-center">
-                    Start you journey to
-                    <br /> good health, Contact us!
+                  Take the first step toward better health!
                   </h2>
                   <span className="max-w-md text-sm text-gray-50/80 text-center">
-                    Our team of expert GPs is dedicated to your well-being.
-                    Start your journey with Medecin A Domicile as corporate when
-                    toggled to corporate and as individual when toggled to
-                    individual
+                  Get support anytime—reach out to our 24/7 hotline today!
                   </span>
                   <ActionButtons variant="" />
                 </div>
@@ -267,10 +264,10 @@ export default function HomePage() {
             </div>
           </motion.section>
 
-          <motion.section className="hidden h-full w-full max-w-screen-xl flex-col gap-8 justify-self-center p-3 md:flex">
+          <motion.section className="hidden h-full w-full max-w-screen-xl flex-col gap-8 justify-self-center p-3 md:flex mt-12">
             <div className="flex flex-col items-center gap-2 w-full">
-              <h1 className="text-3xl lg:text-5xl">What they say about us</h1>
-              <span className="text-gray-600 font-light">
+              <h1 className="text-3xl lg:text-5xl font-semibold">What they say about us</h1>
+              <span className=" text-lg">
                 Some words from previous people who have used our services.
               </span>
             </div>
