@@ -63,7 +63,7 @@ export default function HomePage() {
         <main className="flex-grow md:flex-col md:justify-center z-0 px-4 xl:mx-32">
           <motion.section
             ref={heroRef}
-            className="mt-5 grid max-w-screen-xl grid-cols-1 gap-8 justify-self-center lg:grid-cols-2 xl:justify-center"
+            className="grid max-w-screen-xl grid-cols-1 gap-8 justify-self-center lg:grid-cols-2 xl:justify-center"
             initial="hidden"
             animate={heroInView ? "visible" : "hidden"}
             variants={containerVariants}
@@ -194,7 +194,7 @@ export default function HomePage() {
               />
             </motion.div>
           </motion.section>
-          {/* <motion.section className=" max-w-screen-xl w-full justify-self-center flex flex-col gap-8 h-full">
+          <motion.section className=" max-w-screen-xl w-full justify-self-center flex flex-col gap-8 h-full">
           <div className="flex flex-col items-center gap-2 w-full">
             <h1 className="text-3xl lg:text-5xl">What they say about us</h1>
             <span className="text-gray-600 font-thin">
@@ -241,7 +241,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </motion.section> */}
+        </motion.section>
         </main>
       </span>
 

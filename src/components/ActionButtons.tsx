@@ -17,10 +17,13 @@ export default function ActionButtons({
       {toShowSecondButton && (
         <Button
           variant="ghost"
-          className="text-md rounded-full py-6 px-8 w-full sm:w-auto"
+          noHover={true}
+          className="text-md rounded-full py-6 px-8 w-full sm:w-auto group"
         >
           Our Services
-          <ArrowUpRight className="ml-2 h-5 w-5" />
+          <span className="ml-2 p-1 border rounded-full">
+            <ArrowUpRight className="size-4 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:scale-90 group-hover:border-white" />
+          </span>
         </Button>
       )}
     </div>
