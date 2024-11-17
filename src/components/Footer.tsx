@@ -50,7 +50,7 @@ export default function Footer() {
         <div className="relative w-[500px] text-black">
           <div className="absolute -top-24 hidden h-full w-full flex-col justify-between gap-4 rounded-3xl lg:h-60 bg-blue-400 p-8 lg:flex">
             <h2 className="text-3xl font-bold">
-              We're here for you when you need us.
+              We&apos;re here for you when you need us.
             </h2>
             <span className="flex flex-col sm:flex-row gap-4 mt-6">
               <Button
