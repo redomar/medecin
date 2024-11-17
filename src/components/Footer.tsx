@@ -16,8 +16,7 @@ const menuItems = [
 const policyItems = ["Terms & Conditions", "Privacy Policy", "Licenses"];
 
 const contactInfo = {
-  address:
-    "Me",
+  address: "Me",
   email: "contact@doctors.com",
   phone: "(487) 120-7080",
 };

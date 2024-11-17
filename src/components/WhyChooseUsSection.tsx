@@ -1,6 +1,16 @@
 // src/components/WhyChooseUsSection.tsx
 import { Card, CardContent } from "@/components/ui/card";
-import { Stethoscope, Calendar, Clipboard, Bandage, Bed, Syringe, Sparkle, PhoneCall, Star } from "lucide-react";
+import {
+  Stethoscope,
+  Calendar,
+  Clipboard,
+  Bandage,
+  Bed,
+  Syringe,
+  Sparkle,
+  PhoneCall,
+  Star,
+} from "lucide-react";
 import * as motion from "framer-motion/client";
 import ActionButtons from "./ActionButtons";
 
@@ -36,7 +46,8 @@ const items = [
   {
     icon: Star,
     title: "5 star rating",
-    description: "Our 5-star rating reflects our unwavering commitment to providing exceptional care and service. We consistently exceed expectations, earning the satisfaction of all clients we serve.",
+    description:
+      "Our 5-star rating reflects our unwavering commitment to providing exceptional care and service. We consistently exceed expectations, earning the satisfaction of all clients we serve.",
   },
   {
     icon: Sparkle,
@@ -64,8 +75,9 @@ export default function WhyChooseUsSection() {
             Why Choose Us?
           </motion.h1>
           <p className="text-gray-600 font-light">
-          Choose us for 24/7 consultation and a dedicated hotline. With a 5-star rating and 96% of our clients recommending us, we are the no. 1 homecare service in mauritius.
-
+            Choose us for 24/7 consultation and a dedicated hotline. With a
+            5-star rating and 96% of our clients recommending us, we are the no.
+            1 homecare service in mauritius.
           </p>
           <ActionButtons />
         </div>
@@ -80,11 +92,11 @@ export default function WhyChooseUsSection() {
               <li className="flex gap-2 items-center">
                 <Calendar className="h-8 w-8 text-blue-300/85" />
                 <span className="text-white">Big Brand Offic.</span>
-                </li>
-                <li className="flex gap-2 items-center">
-                  <Clipboard className="h-8 w-8 text-blue-300/85" />
-                  <span className="text-white">Small Business Co.</span>
-                </li>
+              </li>
+              <li className="flex gap-2 items-center">
+                <Clipboard className="h-8 w-8 text-blue-300/85" />
+                <span className="text-white">Small Business Co.</span>
+              </li>
               <li className="flex gap-2 items-center">
                 <Bandage className="h-8 w-8 text-blue-300/85" />
                 <span className="text-white">Medium Business Co.</span>

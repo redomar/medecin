@@ -9,12 +9,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "bg-primary text-primary-foreground shadow hover:scale-95",
+        default: "bg-primary text-primary-foreground shadow hover:scale-95",
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:scale-95",
-        outline:
-          "border border-input bg-background shadow-sm hover:scale-95",
+        outline: "border border-input bg-background shadow-sm hover:scale-95",
         secondary:
           "bg-secondary text-secondary-foreground shadow-sm hover:scale-95",
         ghost: "hover:scale-95",
@@ -29,14 +27,14 @@ const buttonVariants = cva(
       noHover: {
         true: "hover:scale-100",
         false: "",
-      }
+      },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
       noHover: false,
     },
-  }
+  },
 );
 
 export interface ButtonProps
