@@ -16,7 +16,7 @@ export default function Header({
 }) {
   return (
     <header>
-      <div className="hidden max-w-full bg-blue-800  px-14 text-white md:px-32 lg:flex">
+      <div className="hidden max-w-full bg-blue-800 px-14 text-white md:px-32 lg:flex">
         <div className="flex w-full items-baseline justify-between px-6 py-6">
           <span>No. 1 Homecare Service in Mauritius</span>
           <span></span>

@@ -16,6 +16,8 @@ import image002 from "../../public/images/image002.jpg";
 import image004 from "../../public/images/image004.jpg";
 import image005 from "../../public/images/image005.jpg";
 
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -38,8 +40,41 @@ const itemVariants = {
   },
 };
 
+const news = [
+  {
+    title: "Doctors now have a new app",
+    date: "2023-04-01",
+    image: "https://picsum.photos/500/520/",
+    content:
+      "The new app is a great way to stay up to date with your doctor's appointments and manage your health. It's easy to use and has a lot of features to help you stay healthy.",
+    topic: "Annoucnment",
+  },
+  {
+    title: "New GPs join the team",
+    date: "2023-04-01",
+    image: "https://picsum.photos/500/530/",
+    content:
+      "We are thrilled to welcome our new GPs to our team. They bring a wealth of knowledge and experience to our practice, and we are grateful for their dedication and commitment.",
+    topic: "Health",
+  },
+];
 export default function HomePage() {
   const [isPublic, setIsPublic] = useState(true);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 900; // Width of one card
+      const newScrollPosition =
+        scrollContainerRef.current.scrollLeft +
+        (direction === "left" ? -scrollAmount : scrollAmount);
+
+      scrollContainerRef.current.scrollTo({
+        left: newScrollPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   // Create refs for each section
   const heroRef = useRef(null);
@@ -92,17 +127,8 @@ export default function HomePage() {
             </motion.div>
           </motion.section>
 
-          {!isPublic ? (
-            <>
-              <ServicesSection />
-              <WhyChooseUsSection />
-            </>
-          ) : (
-            <>
-              <WhyChooseUsSection />
-              <ServicesSection />
-            </>
-          )}
+          <ServicesSection />
+          <WhyChooseUsSection />
 
           <motion.section
             ref={teamRef}
@@ -116,7 +142,7 @@ export default function HomePage() {
                 <h1 className="text-3xl font-medium lg:text-5xl">
                   Our Professional Team
                 </h1>
-                <span className="text-gray-600 font-thin">
+                <span className="text-gray-600 font-light">
                   Our team of expert GPs is dedicated to your well-being.
                 </span>
               </span>
@@ -131,23 +157,23 @@ export default function HomePage() {
               <Image
                 src={image004}
                 alt="placeholder"
-                width={250}
-                height={250}
-                className="rounded-3xl w-full h-auto object-cover"
+                width={500}
+                height={500}
+                className="rounded-3xl w-full md:h-[500px] object-cover"
               />
               <Image
                 src={image005}
                 alt="placeholder"
-                width={250}
-                height={250}
-                className="rounded-3xl w-full h-auto object-cover"
+                width={500}
+                height={500}
+                className="rounded-3xl w-full md:h-[500px] object-cover"
               />
               <Image
                 src={image002}
                 alt="placeholder"
-                width={250}
-                height={250}
-                className="rounded-3xl w-full h-auto object-cover"
+                width={500}
+                height={500}
+                className="rounded-3xl w-full md:h-[500px] object-cover"
               />
             </motion.div>
           </motion.section>
@@ -171,7 +197,7 @@ export default function HomePage() {
                 className="rounded-3xl hidden lg:object-cover h-[300px] w-[300px] absolute md:block -top-60 xl:-inset-20"
               />
               <div className="w-full h-full px-20">
-                <div className="bg-blue-800/85 text-white h-[460px] w-full p-2  gap-8 rounded-3xl flex flex-col justify-center items-center">
+                <div className="bg-blue-800/85 text-white h-[460px] w-full p-2gap-8 rounded-3xl flex flex-col justify-center items-center">
                   <h2 className=" text-2xl md:text-4xl lg:text-5xl text-center">
                     Start you journey to
                     <br /> good health, Contact us!
@@ -194,54 +220,120 @@ export default function HomePage() {
               />
             </motion.div>
           </motion.section>
-          <motion.section className=" max-w-screen-xl w-full justify-self-center flex flex-col gap-8 h-full">
-          <div className="flex flex-col items-center gap-2 w-full">
-            <h1 className="text-3xl lg:text-5xl">What they say about us</h1>
-            <span className="text-gray-600 font-thin">
-              Some words from previous people who have used our services.
-            </span>
-          </div>
 
-          <div className="flex flex-col xl:flex-row gap-4 self-center xl:self-start overflow-auto max-w-[1400px] 2xl:max-w-screen-xl">
-            <div className="flex w-[900px] h-full gap-4 bg-white border relative rounded-3xl">
-              <Image
-                src="https://picsum.photos/920/920"
-                alt="placeholder"
-                width={920}
-                height={920}
-                className="rounded-l-3xl lg:h-[520px] lg:w-[420px] lg:object-cover"
-              />
-              <div className="absolute right-2 top-2">
-                <h3 className="text-xl lg:text-2xl">01</h3>
-              </div>
-              <div className="flex items-center w-full p-5 max-w-sm">
-                These are some of the Mauritius's best doctors. They are
-                professionals who have been working in the field for many years.
-                They are very knowledgeable and have a lot of experience in
-                treating patients. Amazing people!
-              </div>
+          <motion.section className="max-w-screen-xl w-full justify-self-center flex flex-col gap-8 h-full p-3 ">
+            <div className="md:flex md:justify-between md:items-baseline md:col-span-2 lg:col-span-3 w-full">
+              <span className="flex flex-col gap-3 ">
+                <h1 className="text-3xl font-medium lg:text-5xl">
+                  Browse articles & news
+                </h1>
+                <span className="text-gray-600 font-light">
+                  Our team of expert GPs is dedicated to your well-being.
+                </span>
+              </span>
+            </div>
+            <div className="flex flex-col md:flex-row gap-4">
+              {news.map((news) => (
+                <motion.div
+                  key={news.title}
+                  variants={itemVariants}
+                  className="rounded-xl flex flex-col gap-4"
+                >
+                  <Image
+                    src={news.image}
+                    alt={news.title}
+                    width={500}
+                    height={500}
+                    className="rounded-3xl w-full h-64  lg:h-[300px] object-cover"
+                  />
+                  <div className="flex items-baseline gap-4 text-xs lg:text-base">
+                    <h3 className="mb-1 w-fit rounded-full bg-blue-800/85 px-3 py-1 font-bold text-white">
+                      {news.topic}
+                    </h3>
+                    <p className="text-lg font-semibold text-gray-600">
+                      {news.date}
+                    </p>
+                  </div>
+                  <span>
+                    <h2 className="mb-2 text-xl font-bold lg:text-3xl lg:font-semibold">
+                      {news.title}
+                    </h2>
+                    <p className="text-start text-lg text-gray-800">
+                      {news.content}
+                    </p>
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+
+          <motion.section className="hidden h-full w-full max-w-screen-xl flex-col gap-8 justify-self-center p-3 md:flex">
+            <div className="flex flex-col items-center gap-2 w-full">
+              <h1 className="text-3xl lg:text-5xl">What they say about us</h1>
+              <span className="text-gray-600 font-light">
+                Some words from previous people who have used our services.
+              </span>
             </div>
 
-            <div className="flex w-[900px] h-full gap-4 bg-white border relative rounded-3xl">
-              <Image
-                src="https://picsum.photos/920/921"
-                alt="placeholder"
-                width={920}
-                height={920}
-                className="rounded-l-3xl  lg:h-[520px] lg:w-[420px] lg:object-cover"
-              />
-              <div className="absolute right-2 top-2">
-                <h3 className="text-xl lg:text-2xl">02</h3>
+            <div className="relative">
+              <button
+                onClick={() => scroll("left")}
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 rounded-full p-2 shadow-md hover:bg-white"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+
+              <div
+                ref={scrollContainerRef}
+                className="flex gap-4 overflow-hidden scroll-smooth"
+              >
+                <div className="flex-shrink-0 flex w-[700px] h-full gap-4 bg-white border relative rounded-3xl">
+                  <Image
+                    src="https://picsum.photos/920/920"
+                    alt="placeholder"
+                    width={920}
+                    height={920}
+                    className="rounded-l-3xl lg:h-[520px] lg:w-[420px] lg:object-cover"
+                  />
+                  <div className="absolute right-2 top-2">
+                    <h3 className="text-xl lg:text-2xl">01</h3>
+                  </div>
+                  <div className="flex font-bold text-xl items-center w-full p-5 max-w-sm">
+                    These are some of the Mauritius's best doctors. They are
+                    professionals who have been working in the field for many
+                    years. They are very knowledgeable and have a lot of
+                    experience in treating patients. Amazing people!
+                  </div>
+                </div>
+
+                <div className="flex-shrink-0 flex w-[700px] h-full gap-4 bg-white border relative rounded-3xl">
+                  <Image
+                    src="https://picsum.photos/920/921"
+                    alt="placeholder"
+                    width={920}
+                    height={920}
+                    className="rounded-l-3xl lg:h-[520px] lg:w-[420px] lg:object-cover"
+                  />
+                  <div className="absolute right-2 top-2">
+                    <h3 className="text-xl lg:text-2xl">02</h3>
+                  </div>
+                  <div className="flex font-bold text-xl items-center w-full p-5 max-w-sm">
+                    These are some of the Mauritius's best doctors. They are
+                    professionals who have been working in the field for many
+                    years. They are very knowledgeable and have a lot of
+                    experience in treating patients. Amazing people!
+                  </div>
+                </div>
               </div>
-              <div className="flex  items-center w-full p-5 max-w-sm">
-                These are some of the Mauritius's best doctors. They are
-                professionals who have been working in the field for many years.
-                They are very knowledgeable and have a lot of experience in
-                treating patients. Amazing people!
-              </div>
+
+              <button
+                onClick={() => scroll("right")}
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 rounded-full p-2 shadow-md hover:bg-white"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
             </div>
-          </div>
-        </motion.section>
+          </motion.section>
         </main>
       </span>
 
