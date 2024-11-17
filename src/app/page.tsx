@@ -144,7 +144,8 @@ export default function HomePage() {
                   Our Medical Heroes
                 </h1>
                 <span className="text-gray-600 font-light">
-                We are a team of experienced, registered doctors dedicated to bringing healthcare to you
+                  We are a team of experienced, registered doctors dedicated to
+                  bringing healthcare to you
                 </span>
               </span>
               <div className="flex justify-center gap-2">
@@ -200,10 +201,10 @@ export default function HomePage() {
               <div className="w-full h-full px-20">
                 <div className="bg-blue-800/85 text-white h-[460px] w-full p-2gap-8 rounded-3xl flex flex-col justify-center items-center">
                   <h2 className=" text-2xl md:text-4xl lg:text-5xl text-center">
-                  Take the first step toward better health!
+                    Take the first step <br /> toward better health!
                   </h2>
                   <span className="max-w-md text-sm text-gray-50/80 text-center">
-                  Get support anytime—reach out to our 24/7 hotline today!
+                    Get support anytime—reach out to our 24/7 hotline today!
                   </span>
                   <ActionButtons variant="" />
                 </div>
@@ -266,7 +267,9 @@ export default function HomePage() {
 
           <motion.section className="hidden h-full w-full max-w-screen-xl flex-col gap-8 justify-self-center p-3 md:flex mt-12">
             <div className="flex flex-col items-center gap-2 w-full">
-              <h1 className="text-3xl lg:text-5xl font-semibold">What they say about us</h1>
+              <h1 className="text-3xl lg:text-5xl font-semibold">
+                What they say about us
+              </h1>
               <span className=" text-lg">
                 Some words from previous people who have used our services.
               </span>
