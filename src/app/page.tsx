@@ -299,7 +299,7 @@ export default function HomePage() {
                     <h3 className="text-xl lg:text-2xl">01</h3>
                   </div>
                   <div className="flex font-bold text-xl items-center w-full p-5 max-w-sm">
-                    These are some of the Mauritius's best doctors. They are
+                    These are some of the Mauritius&apos;s best doctors. They are
                     professionals who have been working in the field for many
                     years. They are very knowledgeable and have a lot of
                     experience in treating patients. Amazing people!
@@ -318,7 +318,7 @@ export default function HomePage() {
                     <h3 className="text-xl lg:text-2xl">02</h3>
                   </div>
                   <div className="flex font-bold text-xl items-center w-full p-5 max-w-sm">
-                    These are some of the Mauritius's best doctors. They are
+                    These are some of the Mauritius&apos;s best doctors. They are
                     professionals who have been working in the field for many
                     years. They are very knowledgeable and have a lot of
                     experience in treating patients. Amazing people!
