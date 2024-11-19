@@ -4,9 +4,10 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import * as motion from "framer-motion/client";
 import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus, Car } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
 import ActionButtons from "@/components/ActionButtons";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -100,12 +101,12 @@ export default function ContactPage() {
 
   const toggleFaq = (index: number) => {
     setOpenFaqs((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index],
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     );
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen  bg-[#00000007]">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
 
       <motion.main
@@ -120,35 +121,41 @@ export default function ContactPage() {
             variants={itemVariants}
             className="flex flex-col justify-center"
           >
-            <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
-            <form className="flex flex-col gap-4">
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="p-3 border rounded-lg"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="p-3 border rounded-lg"
-              />
-              <input
-                type="tel"
-                placeholder="Phone"
-                className="p-3 border rounded-lg"
-              />
-              <textarea
-                placeholder="Your message"
-                rows={6}
-                className="p-3 border rounded-lg resize-none"
-              />
-              <button
-                type="submit"
-                className="bg-blue-800 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Send
-              </button>
-            </form>
+            <Card className="w-full">
+              <CardHeader className="text-4xl font-bold mb-8">
+                Contact Us
+              </CardHeader>
+              <CardContent className="flex flex-col gap-4">
+                <form className="flex flex-col gap-4">
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    className="p-3 border rounded-lg"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="p-3 border rounded-lg"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Phone"
+                    className="p-3 border rounded-lg"
+                  />
+                  <textarea
+                    placeholder="Your message"
+                    rows={6}
+                    className="p-3 border rounded-lg resize-none"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-blue-800 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Send
+                  </button>
+                </form>
+              </CardContent>
+            </Card>
           </motion.div>
           <motion.div variants={itemVariants}>
             <Image
@@ -156,7 +163,7 @@ export default function ContactPage() {
               alt="Contact"
               width={800}
               height={900}
-              className="rounded-3xl h-full object-cover"
+              className="rounded-3xl h-full object-cover shadow-lg"
             />
           </motion.div>
         </motion.section>
