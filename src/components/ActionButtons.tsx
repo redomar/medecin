@@ -10,7 +10,7 @@ export default function ActionButtons({
     <div className="flex flex-col sm:flex-row gap-4 mt-6">
       <Button
         variant="secondary"
-        className={`font-extrabold text-md rounded-full py-6 px-8 w-full sm:w-auto ${variant}`}
+        className={`text-sm w-full rounded-full px-8 py-6 font-extrabold text-blue-900 sm:w-auto ${variant}`}
       >
         Book Now
       </Button>
@@ -18,7 +18,7 @@ export default function ActionButtons({
         <Button
           variant="ghost"
           noHover={true}
-          className="text-md rounded-full py-6 px-8 w-full sm:w-auto group"
+          className="text-sm rounded-full py-6 px-8 w-full sm:w-auto group"
         >
           Our Services
           <span className="ml-2 p-1 border rounded-full">

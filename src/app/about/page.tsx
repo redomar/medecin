@@ -85,7 +85,7 @@ export default function AboutPage() {
     <div className="flex flex-col min-h-screen bg-white">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
 
-      <motion.main className="flex-grow md:flex-col md:justify-center z-0 px-4 xl:mx-32">
+      <motion.main className="flex flex-grow flex-col md:justify-center z-0 px-4 xl:mx-32 gap-32">
         {/* <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-blue-200/30 text-black">
           <motion.h1 className="text-5xl font-bold text-black">
             About Us
@@ -95,7 +95,7 @@ export default function AboutPage() {
         </div> */}
         {/* Section 1 */}
         <motion.section
-          className="mx-auto mb-32 grid max-w-screen-xl gap-16 md:grid-cols-2"
+          className="mx-auto grid max-w-screen-xl gap-16 md:grid-cols-2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -106,13 +106,12 @@ export default function AboutPage() {
             className="flex flex-col justify-center"
           >
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Providing Quality Healthcare
+              Providing Quality Healthcare at Home
             </h1>
             <p className="text-gray-600">
-              Transforming Healthcare, One Home at a Time We are passionate
-              about revolutionising healthcare by delivering quality medical
-              services directly to your doorstep. Experience compassionate,
-              convenient, and affordable healthcare at home.
+              We are passionate about revolutionising healthcare by delivering
+              quality medical services directly to your doorstep. Experience
+              compassionate, convenient, and affordable healthcare at home.
             </p>
             <ActionButtons />
           </motion.div>
@@ -164,7 +163,7 @@ export default function AboutPage() {
 
         {/* Section 2 - Stats */}
         <motion.section
-          className="relative mx-auto my-32 max-w-screen-xl"
+          className="relative mx-auto mb-16 max-w-screen-xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 1.0 }}
@@ -183,9 +182,9 @@ export default function AboutPage() {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="bg-white p-8 rounded-xl shadow-lg text-center min-w-[200px]"
+                  className="group bg-white p-8 rounded-xl shadow-lg text-center min-w-[200px]"
                 >
-                  <h3 className="text-4xl font-bold text-blue-800">
+                  <h3 className="text-4xl font-bold text-blue-800 group-hover:text-blue-600 group-hover:scale-110 transition-all duration-300">
                     {metric.number}
                   </h3>
                   <p className="text-gray-600 mt-2">{metric.label}</p>
@@ -197,7 +196,7 @@ export default function AboutPage() {
 
         {/* Section 3 - Services Grid */}
         <motion.section
-          className="mx-auto mb-16 mt-40 max-w-screen-xl"
+          className="mx-auto max-w-screen-xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -217,10 +216,10 @@ export default function AboutPage() {
                     : "md:border-r"
                 }`}
               >
-                <div className="h-full pb-6 flex flex-col">
-                  <div className="flex flex-col items-start h-full">
-                    <span className="flex size-12 rounded-full bg-blue-800/10 p-3 mb-4">
-                      <item.icon className="mr-4 h-full w-full flex-shrink-0 text-blue-800/85" />
+                <div className="group flex h-full flex-col pb-6">
+                  <div className="flex h-full flex-col items-start">
+                    <span className="mb-4 flex size-12 rounded-full bg-blue-800/10 p-3">
+                      <item.icon className="mr-4 h-full w-full flex-shrink-0 text-blue-800/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                     </span>
                     <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                     <p className="text-start text-gray-600 flex-grow">
@@ -233,48 +232,6 @@ export default function AboutPage() {
           </div>
           <div className="mt-12 flex justify-center gap-4">
             <ActionButtons />
-          </div>
-        </motion.section>
-
-        {/* Section 4 - Come visit us */}
-        <motion.section
-          className="relative mx-auto mb-16 mt-40 max-w-screen-xl"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
-          variants={containerVariants}
-        >
-          <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center">
-            Come visit us
-          </h2>
-
-          <div className="relative">
-            <Image
-              src="https://picsum.photos/1920/1400/"
-              width={1920}
-              height={1400}
-              alt="Office location"
-              className="rounded-3xl w-full h-[400px] object-cover"
-            />
-            <div className="absolute bottom-12 right-8">
-              <motion.div
-                variants={itemVariants}
-                className="bg-white p-8 rounded-xl shadow-lg text-left min-w-[300px] max-w-[400px]"
-              >
-                <h3 className="text-2xl font-bold text-blue-800 mb-4">
-                  Visit Our Office
-                </h3>
-                <div className="space-y-3 text-gray-600">
-                  <p>123 Medical Center Street</p>
-                  <p>Port Louis, Mauritius</p>
-                  <p>+230 5XXX XXXX</p>
-                  <p>contact@medecinadomicile.mu</p>
-                </div>
-                <div className="mt-6">
-                  <ActionButtons />
-                </div>
-              </motion.div>
-            </div>
           </div>
         </motion.section>
       </motion.main>

@@ -47,15 +47,29 @@ export default function ServicesPage() {
           <motion.h1 className="text-5xl font-bold text-black">
             Our Services
           </motion.h1>
-          <span>Get the best care for your health</span>
+          <span className="flex max-w-screen-md flex-col gap-4 px-4 font-light text-gray-600">
+            <p>
+              Médecin à Domicile is here for you. With 24/7 doctor consultations
+              at your home, office, or hotel, we bring care directly to you.
+              Need on-spot treatment, tests, or monitoring? We&apos;ve got it
+              covered.
+            </p>
+            <p>
+              Our ethos is built around offering complete support to our
+              patients, ensuring that every aspect of your healthcare journey is
+              cared for. We&apos;re committed to providing the best care
+              possible, tirelessly to reach you as quickly as possible,
+              providing trustworthy and expert care—anywhere, anytime.
+            </p>
+          </span>
           <ActionButtons toShowSecondButton={false} />
         </div>
-        <div className="max-w-screen-xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-screen-xl gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <motion.div key={service.title} variants={itemVariants}>
-              <Card className="h-full">
+              <Card className="group h-full">
                 <CardContent className="flex flex-col items-center p-6">
-                  <service.icon className="mb-4 h-12 w-12 text-blue-800/85" />
+                  <service.icon className="mb-4 h-12 w-12 text-blue-800/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                   <h2 className="mb-2 text-xl font-semibold">
                     {service.title}
                   </h2>

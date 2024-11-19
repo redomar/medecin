@@ -30,7 +30,7 @@ const fadeInVariants = {
 export default function ServicesSection() {
   return (
     <motion.section
-      className="mt-32 max-w-screen-xl justify-self-center"
+      className="max-w-screen-xl justify-self-center"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.1 }}
@@ -68,9 +68,9 @@ export default function ServicesSection() {
             className="lg:col-span-1"
           >
             <Card className="h-full">
-              <CardContent className="flex h-full flex-col gap-4 p-6">
+              <CardContent className="group flex h-full flex-col gap-4 p-6">
                 <span className="flex size-12 rounded-full bg-blue-800/10 p-3">
-                  <service.icon className="mr-4 h-full w-full flex-shrink-0 text-blue-800/85" />
+                  <service.icon className="mr-4 h-full w-full flex-shrink-0 text-blue-800/85 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
                 </span>
                 <div className="flex items-start">
                   <h3 className="content-center text-xl font-bold">

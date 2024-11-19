@@ -3,6 +3,8 @@ import { Button } from "./ui/button";
 import ImgLogo from "../../public/images/MAD.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { Facebook, Linkedin, Twitter } from "lucide-react";
+import Link from "next/link";
 
 // src/components/Footer.tsx
 // Data
@@ -32,9 +34,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative block h-full w-full text-white mt-32">
+    <footer className="relative mt-48 block h-full w-full text-white">
       <div className="flex w-full justify-center gap-32 ">
-        <div className="relative w-[500px] ">
+        <div className="relative w-[500px]">
           <div className="absolute -top-24 hidden h-full w-full flex-col justify-between gap-4 rounded-3xl lg:h-60 bg-blue-800 p-8 lg:flex">
             <span>
               <h1 className="self-start text-4xl font-semibold">
@@ -67,11 +69,27 @@ export default function Footer() {
         <div className="bg-blue-950/50 px-4 py-8 md:px-6 xl:px-48 lg:pt-36">
           <div className="flex flex-col gap-12 w-full sm:flex-row *:lg:min-w-52 max-w-screen-xl justify-self-center mt-16">
             <div className="mb-4 md:mb-0 lg:w-full">
+              <Link href="/">
               <Image
                 src={ImgLogo}
                 alt="Home Doctor Logo"
                 className="relative mr-10 h-12 w-fit hue-rotate-[-160deg] brightness-90"
               />
+              </Link>
+
+              {/* Add social media icons here */}
+              <div className="flex gap-4 pt-4">
+                <a href="#" className="rounded-full bg-white">
+                  <Twitter className="m-2 size-4 text-black" />
+                </a>
+                <a href="#" className="rounded-full bg-white">
+                  <Linkedin className="m-2 size-4 text-black" />
+                </a>
+                <a href="#" className="rounded-full bg-white">
+                  <Facebook className="m-2 size-4 text-black" />
+                </a>
+              </div>
+
               <p className="mt-2">Your health, our priority</p>
             </div>
             <div className="flex max-w-40 flex-col gap-6">

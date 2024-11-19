@@ -55,6 +55,18 @@ const doctors = [
     image: "https://picsum.photos/900/903/",
     bio: "Dr. Kim focuses on providing compassionate care for older adults and managing age-related health concerns.",
   },
+  {
+    name: "Dr. Francis Doe",
+    specialty: "Internal Medicine",
+    image: "https://picsum.photos/902/901/",
+    bio: "Dr. Patel is an expert in managing chronic conditions and promoting overall wellness in adults.",
+  },
+  {
+    name: "Dr. John Doherty",
+    specialty: "Family Medicine",
+    image: "https://picsum.photos/901/902/",
+    bio: "Dr. Patel is an expert in managing chronic conditions and promoting overall wellness in adults.",
+  },
 ];
 
 export default function DoctorsPage() {
@@ -73,7 +85,18 @@ export default function DoctorsPage() {
             <motion.h1 className="text-5xl font-bold text-black">
               Our Doctors
             </motion.h1>
-            <span>Get the best care for your health</span>
+            <span className="flex max-w-screen-md flex-col gap-4 px-4 font-light text-gray-600">
+              <p>
+                Our team of experienced doctors and healthcare experts follow
+                evidence-based medicine and international guidelines. Providing
+                personalised care wherever you are—at home, in the office, or on
+                the go. With our multilingual team, we ensure clear
+                communication and build stronger connections for optimal care.
+                We guarantee your health is in trusted hands, offering comfort,
+                convenience, and the highest quality of medical attention
+                whenever you need us.
+              </p>
+            </span>
             <ActionButtons toShowSecondButton={false} />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

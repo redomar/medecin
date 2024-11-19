@@ -6,6 +6,7 @@ import * as motion from "framer-motion/client";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
+import ActionButtons from "@/components/ActionButtons";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -160,37 +161,45 @@ export default function ContactPage() {
           </motion.div>
         </motion.section>
 
-        {/* Section 2 - Location */}
-        <motion.section className="mx-auto mb-32 grid max-w-screen-xl gap-16 md:grid-cols-2">
-          <motion.div variants={itemVariants}>
+        <motion.section
+          className="relative mx-auto mb-16 mt-40 max-w-screen-xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.8 }}
+          variants={containerVariants}
+        >
+          <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center">
+            Come visit us
+          </h2>
+
+          <div className="relative">
             <Image
-              src="https://picsum.photos/801/600"
-              alt="Location"
-              width={800}
-              height={600}
-              className="rounded-3xl"
+              src="https://picsum.photos/1920/1400/"
+              width={1920}
+              height={1400}
+              alt="Office location"
+              className="rounded-3xl w-full h-[400px] object-cover"
             />
-          </motion.div>
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-col justify-center"
-          >
-            <h2 className="text-3xl font-bold mb-6">Our Location</h2>
-            <div className="space-y-4 text-gray-600">
-              <p className="font-semibold text-xl">Medecin Clinic</p>
-              <p>123 Royal Street</p>
-              <p>Port Louis</p>
-              <p>Mauritius</p>
-              <div className="pt-4">
-                <p className="font-semibold">Phone:</p>
-                <p>+230 123 4567</p>
-              </div>
-              <div>
-                <p className="font-semibold">Email:</p>
-                <p>contact@medecin.mu</p>
-              </div>
+            <div className="absolute bottom-12 right-8">
+              <motion.div
+                variants={itemVariants}
+                className="bg-white p-8 rounded-xl shadow-lg text-left min-w-[300px] max-w-[400px]"
+              >
+                <h3 className="text-2xl font-bold text-blue-800 mb-4">
+                  Visit Our Office
+                </h3>
+                <div className="space-y-3 text-gray-600">
+                  <p>123 Medical Center Street</p>
+                  <p>Port Louis, Mauritius</p>
+                  <p>+230 5XXX XXXX</p>
+                  <p>contact@medecinadomicile.mu</p>
+                </div>
+                <div className="mt-6">
+                  <ActionButtons />
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
         </motion.section>
 
         {/* Section 3 - FAQ (already in English) */}

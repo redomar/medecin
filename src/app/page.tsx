@@ -87,15 +87,10 @@ export default function HomePage() {
   const contactInView = useInView(contactRef, { once: false });
 
   return (
-    <div className="flex flex-col min-h-screen bg-white ">
+    <div className="flex min-h-screen flex-col bg-white">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
-      <span
-        style={{
-          background:
-            "repeating-linear-gradient(to bottom, white 0px, white 445px,#00000007 445px,#00000007 1900px)",
-        }}
-      >
-        <main className="flex-grow md:flex-col md:justify-center z-0 px-4 xl:mx-32">
+      <span>
+        <main className="z-0 flex flex-grow gap-32 px-4  flex-col justify-center xl:mx-32">
           <motion.section
             ref={heroRef}
             className="grid max-w-screen-xl grid-cols-1 gap-8 justify-self-center lg:grid-cols-2 xl:justify-center"
@@ -110,7 +105,7 @@ export default function HomePage() {
               <h1 className="text-3xl font-semibold md:text-5xl lg:mb-3 lg:text-6xl">
                 Compassionate Care, Right at Home.
               </h1>
-              <p className="lg:text-lg font-semibold">
+              <p className="font-semibold lg:text-lg">
                 We’re here for you 24/7, offering the best care Mauritius has to
                 offer. With a deep trust and compassion, we’re committed to
                 supporting your well-being every step of the way, like family
@@ -123,7 +118,7 @@ export default function HomePage() {
                 alt="placeholder"
                 width={1400}
                 height={1400}
-                className="rounded-3xl w-full lg:h-[756px] xl:h-[666px] lg:object-cover"
+                className="w-full rounded-3xl lg:h-[756px] lg:object-cover xl:h-[666px]"
               />
             </motion.div>
           </motion.section>
@@ -133,17 +128,17 @@ export default function HomePage() {
 
           <motion.section
             ref={teamRef}
-            className="mt-20 max-w-screen-xl w-full justify-self-center flex flex-col gap-8"
+            className="flex w-full max-w-screen-xl flex-col gap-8 justify-self-center"
             initial="hidden"
             animate={teamInView ? "visible" : "hidden"}
             variants={containerVariants}
           >
-            <div className="md:flex md:justify-between md:items-baseline md:col-span-2 lg:col-span-3 w-full">
-              <span className="flex flex-col gap-3 ">
+            <div className="w-full md:col-span-2 md:flex md:items-baseline md:justify-between lg:col-span-3">
+              <span className="flex flex-col gap-3">
                 <h1 className="text-3xl font-medium lg:text-5xl">
                   Our Medical Heroes
                 </h1>
-                <span className="text-gray-600 font-light">
+                <span className="font-light text-gray-600">
                   We are a team of experienced, registered doctors dedicated to
                   bringing healthcare to you
                 </span>
@@ -154,56 +149,56 @@ export default function HomePage() {
             </div>
             <motion.div
               variants={itemVariants}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 relative w-full"
+              className="relative grid w-full grid-cols-1 gap-8 md:grid-cols-3"
             >
               <Image
                 src={image004}
                 alt="placeholder"
                 width={500}
                 height={500}
-                className="rounded-3xl w-full md:h-[500px] object-cover"
+                className="rounded-3xl w-full object-cover md:h-[500px]"
               />
               <Image
                 src={image005}
                 alt="placeholder"
                 width={500}
                 height={500}
-                className="rounded-3xl w-full md:h-[500px] object-cover"
+                className="w-full rounded-3xl object-cover md:h-[500px]"
               />
               <Image
                 src={image002}
                 alt="placeholder"
                 width={500}
                 height={500}
-                className="rounded-3xl w-full md:h-[500px] object-cover"
+                className="w-full rounded-3xl object-cover md:h-[500px]"
               />
             </motion.div>
           </motion.section>
 
           <motion.section
             ref={contactRef}
-            className="hidden lg:flex mt-32 md:max-w-screen-lg xl:max-w-screen-xl lg:px-10 xl:px-20 w-full justify-self-center flex-row gap-8 h-full"
+            className="hidden h-full w-full flex-row gap-8 justify-self-center md:max-w-screen-lg lg:flex lg:px-10 xl:max-w-screen-xl xl:px-20"
             initial="hidden"
             animate={contactInView ? "visible" : "hidden"}
             variants={containerVariants}
           >
             <motion.div
               variants={itemVariants}
-              className="relative w-full h-full my-64"
+              className="relative my-32 h-full w-full"
             >
               <Image
                 src="https://picsum.photos/301/300/"
                 alt="placeholder"
                 width={300}
                 height={300}
-                className="rounded-3xl hidden lg:object-cover h-[300px] w-[300px] absolute md:block -top-60 xl:-inset-20"
+                className="absolute -top-60 hidden h-[300px] w-[300px] rounded-3xl md:block lg:object-cover xl:-inset-20"
               />
-              <div className="w-full h-full px-20">
-                <div className="bg-blue-800/85 text-white h-[460px] w-full p-2gap-8 rounded-3xl flex flex-col justify-center items-center">
-                  <h2 className=" text-2xl md:text-4xl lg:text-5xl text-center">
+              <div className="h-full w-full px-20">
+                <div className="p-2gap-8 flex h-[460px] w-full flex-col items-center justify-center rounded-3xl bg-blue-800/85 text-white">
+                  <h2 className="text-center text-2xl md:text-4xl lg:text-5xl">
                     Take the first step <br /> toward better health!
                   </h2>
-                  <span className="max-w-md text-sm text-gray-50/80 text-center">
+                  <span className="max-w-md text-center text-sm text-gray-50/80">
                     Get support anytime—reach out to our 24/7 hotline today!
                   </span>
                   <ActionButtons variant="" />
@@ -214,35 +209,35 @@ export default function HomePage() {
                 alt="placeholder"
                 width={300}
                 height={300}
-                className="rounded-3xl hidden lg:object-cover h-[300px] w-[300px] absolute md:block -bottom-48 xl:-bottom-20 right-0 xl:-right-20"
+                className="absolute -bottom-48 right-0 hidden h-[300px] w-[300px] rounded-3xl md:block lg:object-cover xl:-bottom-20 xl:-right-20"
               />
             </motion.div>
           </motion.section>
 
-          <motion.section className="max-w-screen-xl w-full justify-self-center flex flex-col gap-8 h-full p-3 ">
-            <div className="md:flex md:justify-between md:items-baseline md:col-span-2 lg:col-span-3 w-full">
-              <span className="flex flex-col gap-3 ">
+          <motion.section className="flex h-full w-full max-w-screen-xl flex-col gap-8 justify-self-center p-3">
+            <div className="w-full md:col-span-2 md:flex md:items-baseline md:justify-between lg:col-span-3">
+              <span className="flex flex-col gap-3">
                 <h1 className="text-3xl font-medium lg:text-5xl">
                   Browse articles & news
                 </h1>
-                <span className="text-gray-600 font-light">
+                <span className="font-light text-gray-600">
                   Our team of expert GPs is dedicated to your well-being.
                 </span>
               </span>
             </div>
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col gap-4 md:flex-row">
               {news.map((news) => (
                 <motion.div
                   key={news.title}
                   variants={itemVariants}
-                  className="rounded-xl flex flex-col gap-4"
+                  className="flex flex-col gap-4 rounded-xl"
                 >
                   <Image
                     src={news.image}
                     alt={news.title}
                     width={500}
                     height={500}
-                    className="rounded-3xl w-full h-64  lg:h-[300px] object-cover"
+                    className="h-64 w-full rounded-3xl object-cover lg:h-[300px]"
                   />
                   <div className="flex items-baseline gap-4 text-xs lg:text-base">
                     <h3 className="mb-1 w-fit rounded-full bg-blue-800/85 px-3 py-1 font-bold text-white">
@@ -265,20 +260,20 @@ export default function HomePage() {
             </div>
           </motion.section>
 
-          <motion.section className="hidden h-full w-full max-w-screen-xl flex-col gap-8 justify-self-center p-3 md:flex mt-12">
-            <div className="flex flex-col items-center gap-2 w-full">
-              <h1 className="text-3xl lg:text-5xl font-semibold">
-                What they say about us
+          <motion.section className="hidden h-full w-full max-w-screen-xl flex-col gap-8 justify-self-center p-3 md:flex">
+            <div className="flex w-full flex-col items-center gap-2">
+              <h1 className="text-3xl font-medium lg:text-5xl">
+              Stories that Matter
               </h1>
-              <span className=" text-lg">
-                Some words from previous people who have used our services.
+              <span className="text-lg">
+              Discover why our patients trust and recommend us for their health and support needs.
               </span>
             </div>
 
             <div className="relative">
               <button
                 onClick={() => scroll("left")}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 rounded-full p-2 shadow-md hover:bg-white"
+                className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md hover:bg-white"
               >
                 <ChevronLeft className="h-6 w-6" />
               </button>
@@ -287,7 +282,7 @@ export default function HomePage() {
                 ref={scrollContainerRef}
                 className="flex gap-4 overflow-hidden scroll-smooth"
               >
-                <div className="flex-shrink-0 flex w-[700px] h-full gap-4 bg-white border relative rounded-3xl">
+                <div className="relative flex h-full w-[700px] flex-shrink-0 gap-4 rounded-3xl border bg-white">
                   <Image
                     src="https://picsum.photos/920/920"
                     alt="placeholder"
@@ -298,15 +293,15 @@ export default function HomePage() {
                   <div className="absolute right-2 top-2">
                     <h3 className="text-xl lg:text-2xl">01</h3>
                   </div>
-                  <div className="flex font-bold text-xl items-center w-full p-5 max-w-sm">
-                    These are some of the Mauritius&apos;s best doctors. They are
-                    professionals who have been working in the field for many
-                    years. They are very knowledgeable and have a lot of
+                  <div className="flex w-full max-w-sm items-center p-5 text-lg font-semibold">
+                    These are some of the Mauritius&apos;s best doctors. They
+                    are professionals who have been working in the field for
+                    many years. They are very knowledgeable and have a lot of
                     experience in treating patients. Amazing people!
                   </div>
                 </div>
 
-                <div className="flex-shrink-0 flex w-[700px] h-full gap-4 bg-white border relative rounded-3xl">
+                <div className="relative flex h-full w-[700px] flex-shrink-0 gap-4 rounded-3xl border bg-white">
                   <Image
                     src="https://picsum.photos/920/921"
                     alt="placeholder"
@@ -317,10 +312,10 @@ export default function HomePage() {
                   <div className="absolute right-2 top-2">
                     <h3 className="text-xl lg:text-2xl">02</h3>
                   </div>
-                  <div className="flex font-bold text-xl items-center w-full p-5 max-w-sm">
-                    These are some of the Mauritius&apos;s best doctors. They are
-                    professionals who have been working in the field for many
-                    years. They are very knowledgeable and have a lot of
+                  <div className="flex w-full max-w-sm items-center p-5 text-xl font-bold">
+                    These are some of the Mauritius&apos;s best doctors. They
+                    are professionals who have been working in the field for
+                    many years. They are very knowledgeable and have a lot of
                     experience in treating patients. Amazing people!
                   </div>
                 </div>
@@ -328,7 +323,7 @@ export default function HomePage() {
 
               <button
                 onClick={() => scroll("right")}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 rounded-full p-2 shadow-md hover:bg-white"
+                className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md hover:bg-white"
               >
                 <ChevronRight className="h-6 w-6" />
               </button>

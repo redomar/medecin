@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Dispatch, SetStateAction } from "react";
 import ImgLogo from "../../public/images/MAD.png";
 import NavLinks from "./NavLinks";
+import Link from "next/link";
 
 export default function Header({
   isPublic,
@@ -23,7 +24,7 @@ export default function Header({
           <div className="flex items-center gap-2">
             <div className="flex items-center rounded-full bg-blue-700 p-1">
               <button
-                className={`px-3 rounded-full py-1 transition-all ${
+                className={`rounded-full px-3 py-1 text-sm transition-all ${
                   isPublic ? "bg-white text-blue-800" : "text-white"
                 }`}
                 onClick={() => setIsPublic(true)}
@@ -31,7 +32,7 @@ export default function Header({
                 Public
               </button>
               <button
-                className={`px-3 rounded-full py-1 transition-all ${
+                className={`rounded-full px-3 py-1 text-sm transition-all ${
                   !isPublic ? "bg-white text-blue-800" : "text-white"
                 }`}
                 onClick={() => setIsPublic(false)}
@@ -49,13 +50,17 @@ export default function Header({
           <NavLinks part={1} />
         </nav>
 
-        <div className="flex h-full flex-1 items-center justify-center">
+        <Link href="/" className="flex h-full flex-1 items-center justify-center">
           <Image
             src={ImgLogo}
+            onMouseDown={() => {
+              // navigate to home page
+              
+            }}
             alt="Home Doctor Logo"
             className="relative mr-10 h-8 w-fit hue-rotate-[-160deg] brightness-90"
           />
-        </div>
+        </Link>
 
         <nav className="hidden font-medium md:flex md:items-center md:gap-5 lg:gap-6">
           <NavLinks part={2} />
