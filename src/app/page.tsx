@@ -1,23 +1,18 @@
 // src/app/home/page.tsx
 "use client";
-import Image from "next/image";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import ActionButtons from "@/components/ActionButtons";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import ServicesSection from "@/components/ServicesSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
-import * as motion from "framer-motion/client";
-import { useState } from "react";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
-import image001 from "../../public/images/image001.jpg";
-import image002 from "../../public/images/image002.jpg";
-// import image003 from "../../public/images/image003.jpg";
-import image004 from "../../public/images/image004.jpg";
-import image005 from "../../public/images/image005.jpg";
+import * as motion from "framer-motion/client";
+import Image from "next/image";
+import { useRef, useState } from "react";
 import team1 from "../../public/images/executive-team/team-1.png";
 import team2 from "../../public/images/executive-team/team-2.png";
 import team3 from "../../public/images/executive-team/team-3.png";
+import image001 from "../../public/images/image001.jpg";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -93,7 +88,7 @@ export default function HomePage() {
     <div className="flex min-h-screen flex-col">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
       <span>
-        <main className="z-0 flex flex-grow gap-32 px-4  flex-col justify-center xl:mx-32">
+        <main className="z-0 flex flex-grow gap-32 px-4 flex-col justify-self-center xl:mx-32">
           <motion.section
             ref={heroRef}
             className="grid max-w-screen-xl grid-cols-1 gap-8 justify-self-center lg:grid-cols-2 xl:justify-center"
@@ -164,7 +159,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent rounded-b-3xl">
                   <p className="absolute bottom-4 left-4 text-white font-semibold text-xl">
-                    Dr. Mokshad Sharma, CEO
+                    Dr. Mokshad Sharma, Director
                   </p>
                 </div>
               </div>
@@ -179,7 +174,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent rounded-b-3xl">
                   <p className="absolute bottom-4 left-4 text-white font-semibold text-xl">
-                    Dr. Yasheel Aukhojee, Director
+                    Dr. Yasheel Aukhojee, CEO
                   </p>
                 </div>
               </div>

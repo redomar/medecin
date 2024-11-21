@@ -31,7 +31,10 @@ export default function Footer() {
                 We come to you
               </h1>
             </span>
-            <ActionButtons variant="bg-secondary-dark text-white" toShowSecondButton={false} />
+            <ActionButtons
+              variant="bg-secondary-dark text-white"
+              toShowSecondButton={false}
+            />
           </div>
         </div>
         <div className="relative w-[500px] text-black">
@@ -40,12 +43,14 @@ export default function Footer() {
               We&apos;re here for you when you need us.
             </h2>
             <span className="flex flex-col sm:flex-row gap-4 mt-6">
-              <Button
-                variant="secondary"
-                className={`text-md w-full rounded-full bg-yellow-600/85 px-8 py-6 font-extrabold text-white sm:w-auto`}
-              >
-                Contact Us
-              </Button>
+              <Link href="/contact">
+                <Button
+                  variant="secondary"
+                  className={`text-md w-full rounded-full bg-yellow-600/85 px-8 py-6 font-extrabold text-white sm:w-auto`}
+                >
+                  Contact Us
+                </Button>
+              </Link>
             </span>
           </div>
         </div>

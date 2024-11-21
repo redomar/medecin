@@ -41,8 +41,8 @@ export default function Header({
               </button>
             </div>
           </div>
-          <span>Hotlines: 86121</span>
-          <span>Emergency: 193</span>
+          <span>Hotline: <Link href="tel:86121">86121</Link></span>
+          <span>Emergency: <Link href="tel:193">193</Link></span>
         </div>
       </div>
       <div className="sticky top-0 z-50 flex h-[5.265rem] items-center justify-between px-4 md:mx-32 md:mb-5 md:mt-1 md:px-6">
