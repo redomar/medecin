@@ -83,7 +83,7 @@ export default function WhyChooseUsSection() {
         </div>
         <div className="content-center">
           {/* a box of 6 icons and plausible company names blue-800/85 background */}
-          <div className="flex flex-col gap-4 bg-[#9ADBCC] p-12 rounded-3xl mb-5 max-w-screen-sm content-center">
+          <div className="flex flex-col gap-4 bg-secondary p-12 rounded-3xl mb-5 max-w-screen-sm content-center">
             <ul className="grid grid-cols-2 gap-4 ">
               <li className="group flex items-center gap-2">
                 <Stethoscope className="h-8 w-8 text-black transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
@@ -122,7 +122,7 @@ export default function WhyChooseUsSection() {
           >
             <div className="group flex h-full flex-col pb-6">
               <div className="flex h-full flex-col items-start">
-                <span className="mb-4 flex size-12 rounded-full  bg-[#ffe9c6] p-3">
+                <span className="mb-4 flex size-12 rounded-full  bg-primary p-3">
                   <item.icon className="mr-4 h-full w-full flex-shrink-0 text-yellow-600 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                 </span>
                 <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>

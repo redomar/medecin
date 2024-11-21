@@ -90,7 +90,7 @@ export default function HomePage() {
   const contactInView = useInView(contactRef, { once: false });
 
   return (
-    <div className="flex min-h-screen flex-col bg-white">
+    <div className="flex min-h-screen flex-col">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
       <span>
         <main className="z-0 flex flex-grow gap-32 px-4  flex-col justify-center xl:mx-32">
@@ -102,7 +102,7 @@ export default function HomePage() {
             variants={containerVariants}
           >
             <motion.div
-              className="flex flex-col gap-8 rounded-3xl bg-[#ffe9c6] px-6 py-8 text-black md:p-10 lg:h-[756px] lg:justify-center xl:h-[666px]"
+              className="flex flex-col gap-8 rounded-3xl bg-primary px-6 py-8 text-black md:p-10 lg:h-[756px] lg:justify-center xl:h-[666px]"
               variants={itemVariants}
             >
               <h1 className="text-3xl font-semibold md:text-5xl lg:mb-3 lg:text-6xl">
@@ -220,7 +220,7 @@ export default function HomePage() {
                 className="absolute -top-60 hidden h-[300px] w-[300px] rounded-3xl md:block lg:object-cover xl:-inset-20"
               />
               <div className="h-full w-full px-20">
-                <div className="p-2gap-8 flex h-[460px] w-full flex-col items-center justify-center rounded-3xl bg-[#9ADBCC] text-black">
+                <div className="p-2gap-8 flex h-[460px] w-full flex-col items-center justify-center rounded-3xl bg-secondary text-black">
                   <h2 className="text-center text-2xl md:text-4xl lg:text-5xl">
                     Take the first step <br /> toward better health!
                   </h2>
@@ -266,7 +266,7 @@ export default function HomePage() {
                     className="h-64 w-full rounded-3xl object-cover lg:h-[300px]"
                   />
                   <div className="flex items-baseline gap-4 text-xs lg:text-base">
-                    <h3 className="mb-1 w-fit rounded-full bg-[#ffe9c6] px-3 py-1 font-bold text-black">
+                    <h3 className="mb-1 w-fit rounded-full bg-primary px-3 py-1 font-bold text-black">
                       {news.topic}
                     </h3>
                     <p className="text-lg font-semibold text-gray-600">

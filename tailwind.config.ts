@@ -28,6 +28,7 @@ const config: Config = {
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          dark: "hsl(var(--secondary-dark))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -65,7 +66,7 @@ const config: Config = {
       xl: "1440px",
       "2xl": "1920px",
     },
-  plugins: [tailwindcssAnimate],
+    plugins: [tailwindcssAnimate],
   },
 };
 export default config;

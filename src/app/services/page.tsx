@@ -35,7 +35,7 @@ export default function ServicesPage() {
   const services = isPublic ? services_en : services_fr;
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#fffaf1]">
+    <div className="flex min-h-screen flex-col">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
       <motion.main
         className="flex-grow md:flex-col md:justify-center z-0 px-4 xl:mx-32"
@@ -62,7 +62,10 @@ export default function ServicesPage() {
               providing trustworthy and expert care—anywhere, anytime.
             </p>
           </span>
-          <ActionButtons toShowSecondButton={false} variant="bg-white text-yellow-800" />
+          <ActionButtons
+            toShowSecondButton={false}
+            variant="bg-white text-yellow-800"
+          />
         </div>
         <div className="mx-auto grid max-w-screen-xl gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (

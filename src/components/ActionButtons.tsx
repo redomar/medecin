@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function ActionButtons({
-  variant = "bg-[#9ADBCC] text-[#134a3e]",
+  variant = "bg-secondary text-secondary-dark",
   toShowSecondButton = true,
 }) {
   return (
@@ -12,7 +12,7 @@ export default function ActionButtons({
       <Link href="/contact">
         <Button
           variant="secondary"
-          className={`text-sm w-full rounded-full px-8 py-6 font-extrabold text-[#134a3e] sm:w-auto ${variant}`}
+          className={`text-sm w-full rounded-full px-8 py-6 font-extrabold text-secondary-dark sm:w-auto ${variant}`}
         >
           Book Now
         </Button>
@@ -25,7 +25,7 @@ export default function ActionButtons({
             className="text-sm rounded-full py-6 px-8 w-full sm:w-auto group"
           >
             Our Services
-            <span className="ml-2 p-1 border border-[#583e13] rounded-full">
+            <span className="ml-2 p-1 border border-accent rounded-full">
               <ArrowUpRight className="size-4 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:scale-90 group-hover:border-white" />
             </span>
           </Button>

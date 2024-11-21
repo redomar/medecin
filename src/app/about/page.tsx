@@ -83,7 +83,7 @@ export default function AboutPage() {
   const [isPublic, setIsPublic] = useState(true);
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
 
       <motion.main className="flex flex-grow flex-col md:justify-center z-0 px-4 xl:mx-32 gap-32">
@@ -211,7 +211,7 @@ export default function AboutPage() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className={`border-[#ffe9c6] *:p-6 ${
+                className={`border-primary *:p-6 ${
                   (index + 1) % 3 === 0 || index === services.length - 1
                     ? ""
                     : "md:border-r"
@@ -219,7 +219,7 @@ export default function AboutPage() {
               >
                 <div className="group flex h-full flex-col pb-6">
                   <div className="flex h-full flex-col items-start">
-                    <span className="mb-4 flex size-12 rounded-full bg-[#ffe9c6] p-3">
+                    <span className="mb-4 flex size-12 rounded-full bg-primary p-3">
                       <item.icon className="mr-4 h-full w-full flex-shrink-0 text-yellow-600 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                     </span>
                     <h3 className="text-xl font-semibold mb-2">{item.title}</h3>

@@ -106,7 +106,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen  bg-[#00000007]">
+    <div className="flex flex-col min-h-screen">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
 
       <motion.main
@@ -149,7 +149,7 @@ export default function ContactPage() {
                   />
                   <button
                     type="submit"
-                    className="rounded-lg  bg-[#ffe9c6] px-6 py-3 font-semibold text-yellow-800 transition-colors hover:bg-yellow-500"
+                    className="rounded-lg  bg-primary px-6 py-3 font-semibold text-yellow-800 transition-colors hover:bg-yellow-500"
                   >
                     Send
                   </button>

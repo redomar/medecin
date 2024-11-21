@@ -72,7 +72,7 @@ const doctors = [
 export default function DoctorsPage() {
   const [isPublic, setIsPublic] = useState(true);
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
       <motion.main
         className="flex-grow md:flex-col md:justify-center z-0 px-4 xl:mx-32"
