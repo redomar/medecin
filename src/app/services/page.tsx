@@ -49,17 +49,17 @@ export default function ServicesPage() {
           </motion.h1>
           <span className="flex max-w-screen-md flex-col gap-4 px-4 font-light text-gray-600">
             <p>
-              Médecin à Domicile is here for you. With 24/7 doctor consultations
-              at your home, office, or hotel, we bring care directly to you.
-              Need on-spot treatment, tests, or monitoring? We&apos;ve got it
-              covered.
+              Since 2016, we have been providing exceptional care with 24/7
+              doctor consultations at your home, office, or hotel, bringing
+              healthcare directly to you. Need on-spot treatment, tests, or
+              monitoring? We&apos;ve got it covered.
             </p>
             <p>
               Our ethos is built around offering complete support to our
               patients, ensuring that every aspect of your healthcare journey is
               cared for. We&apos;re committed to providing the best care
-              possible, tirelessly to reach you as quickly as possible,
-              providing trustworthy and expert care—anywhere, anytime.
+              tirelessly to reach you as quickly as possible, providing
+              trustworthy and expert care—anywhere, anytime.
             </p>
           </span>
           <ActionButtons

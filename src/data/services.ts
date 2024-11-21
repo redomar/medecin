@@ -28,7 +28,7 @@ const services = [
     title: "Urgent Care Visits",
     description:
       "Immediate medical attention for non-critical emergencies, directly to you. Our urgent care avoids hospital delays and provides fast, effective treatment.",
-    icon: Bandage,
+    icon: Clipboard,
   },
   {
     title: "Corporate Care",
@@ -37,29 +37,34 @@ const services = [
     icon: Building,
   },
   {
+    title: "Specialist Medical Care",
+    description:
+      "Specialist healthcare delivered to your home. From cardiologists to endocrinologists, we connect you with experts delivered by our partners.",
+    icon: Users,
+  },
+  {
     title: "Postoperative Care",
     description:
       "Home-based support for post-surgery recovery. Our services include wound care, pain management, and follow-up consultations to aid your healing.",
-    icon: Bed,
+    icon: Bandage,
   },
   {
     title: "Vaccinations",
     description:
-      "Comprehensive immunisation programs, ensuring community health with convenient, reliable, and expertly administered vaccines at your location.",
+      "Comprehensive immunization programs, ensuring community health with convenient, reliable, and expertly administered vaccines at your location.",
     icon: Syringe,
   },
-  // Keeping relevant existing services
   {
-    title: "Family Medicine",
+    title: "Medical Escorting",
     description:
-      "Personalized care for all family members, from infants to elderly, addressing a wide range of health concerns.",
-    icon: Users,
+      "Personalized support through our Medical Escort service, accompanying patients abroad and assisting them safely to the airport, home, or hospital.",
+    icon: UserCog,
   },
   {
-    title: "Health Screenings",
+    title: "Health Tracking",
     description:
-      "Early detection screenings and tests to identify potential health issues before they become serious.",
-    icon: Clipboard,
+      "Effortless monitoring of key metrics like blood pressure (BP), glucose levels, cholesterol, SPO2, and more, ensuring proactive wellness management.",
+    icon: Bed,
   },
 ];
 
