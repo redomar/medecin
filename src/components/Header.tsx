@@ -17,15 +17,15 @@ export default function Header({
 }) {
   return (
     <header>
-      <div className="hidden max-w-full bg-blue-800 px-14 text-white md:px-32 lg:flex">
+      <div className="hidden max-w-full bg-yellow-600 px-14 text-white md:px-32 lg:flex">
         <div className="flex w-full items-baseline justify-between px-6 py-6">
           <span>No. 1 Homecare Service in Mauritius</span>
           <span></span>
           <div className="flex items-center gap-2">
-            <div className="flex items-center rounded-full bg-blue-700 p-1">
+            <div className="flex items-center rounded-full bg-[#D19F3C] p-1">
               <button
                 className={`rounded-full px-3 py-1 text-sm transition-all ${
-                  isPublic ? "bg-white text-blue-800" : "text-white"
+                  isPublic ? "bg-white text-yellow-800" : "text-white"
                 }`}
                 onClick={() => setIsPublic(true)}
               >
@@ -33,7 +33,7 @@ export default function Header({
               </button>
               <button
                 className={`rounded-full px-3 py-1 text-sm transition-all ${
-                  !isPublic ? "bg-white text-blue-800" : "text-white"
+                  !isPublic ? "bg-white text-yellow-800" : "text-white"
                 }`}
                 onClick={() => setIsPublic(false)}
               >
@@ -42,7 +42,7 @@ export default function Header({
             </div>
           </div>
           <span>Emergency: 193</span>
-          <span>Hotline: 86121 / <span>58017777</span> </span>
+          <span className="relative">Hotlines: <span className="absolute -top-1"> <span className="flex flex-col px-1 text-center"><span>86121</span><span>58017777</span></span></span> </span>
         </div>
       </div>
       <div className="sticky top-0 z-50 flex h-[5.265rem] items-center justify-between px-4 md:mx-32 md:mb-5 md:mt-1 md:px-6">

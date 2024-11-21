@@ -43,7 +43,7 @@ export default function ServicesPage() {
         animate="visible"
         variants={containerVariants}
       >
-        <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-blue-200/30 text-black">
+        <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-yellow-200/30 text-black">
           <motion.h1 className="text-5xl font-bold text-black">
             Our Services
           </motion.h1>
@@ -69,7 +69,7 @@ export default function ServicesPage() {
             <motion.div key={service.title} variants={itemVariants}>
               <Card className="group h-full">
                 <CardContent className="flex flex-col items-center p-6">
-                  <service.icon className="mb-4 h-12 w-12 text-blue-800/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                  <service.icon className="mb-4 h-12 w-12 text-yellow-600/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                   <h2 className="mb-2 text-xl font-semibold">
                     {service.title}
                   </h2>

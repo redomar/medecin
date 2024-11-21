@@ -99,7 +99,7 @@ export default function HomePage() {
             variants={containerVariants}
           >
             <motion.div
-              className="flex flex-col gap-8 rounded-3xl bg-blue-800/85 px-6 py-8 text-white md:p-10 lg:h-[756px] lg:justify-center xl:h-[666px]"
+              className="flex flex-col gap-8 rounded-3xl bg-yellow-600/85 px-6 py-8 text-white md:p-10 lg:h-[756px] lg:justify-center xl:h-[666px]"
               variants={itemVariants}
             >
               <h1 className="text-3xl font-semibold md:text-5xl lg:mb-3 lg:text-6xl">
@@ -108,7 +108,7 @@ export default function HomePage() {
               <p className="font-semibold lg:text-lg">
                 We’re here for you 24/7, offering the best care Mauritius has to
                 offer. With a deep trust and compassion, we’re committed to
-                supporting your well-being every step of the way, like family
+                supporting your well-being every step of the way, like family.
               </p>
               <ActionButtons variant="" />
             </motion.div>
@@ -140,7 +140,7 @@ export default function HomePage() {
                 </h1>
                 <span className="font-light text-gray-600">
                   We are a team of experienced, registered doctors dedicated to
-                  bringing healthcare to you
+                  bringing healthcare to you.
                 </span>
               </span>
               <div className="flex justify-center gap-2">
@@ -194,7 +194,7 @@ export default function HomePage() {
                 className="absolute -top-60 hidden h-[300px] w-[300px] rounded-3xl md:block lg:object-cover xl:-inset-20"
               />
               <div className="h-full w-full px-20">
-                <div className="p-2gap-8 flex h-[460px] w-full flex-col items-center justify-center rounded-3xl bg-blue-800/85 text-white">
+                <div className="p-2gap-8 flex h-[460px] w-full flex-col items-center justify-center rounded-3xl bg-yellow-600/85 text-white">
                   <h2 className="text-center text-2xl md:text-4xl lg:text-5xl">
                     Take the first step <br /> toward better health!
                   </h2>
@@ -240,7 +240,7 @@ export default function HomePage() {
                     className="h-64 w-full rounded-3xl object-cover lg:h-[300px]"
                   />
                   <div className="flex items-baseline gap-4 text-xs lg:text-base">
-                    <h3 className="mb-1 w-fit rounded-full bg-blue-800/85 px-3 py-1 font-bold text-white">
+                    <h3 className="mb-1 w-fit rounded-full bg-yellow-600/85 px-3 py-1 font-bold text-white">
                       {news.topic}
                     </h3>
                     <p className="text-lg font-semibold text-gray-600">
@@ -263,10 +263,11 @@ export default function HomePage() {
           <motion.section className="hidden h-full w-full max-w-screen-xl flex-col gap-8 justify-self-center p-3 md:flex">
             <div className="flex w-full flex-col items-center gap-2">
               <h1 className="text-3xl font-medium lg:text-5xl">
-              Stories that Matter
+                Stories that Matter
               </h1>
               <span className="text-lg">
-              Discover why our patients trust and recommend us for their health and support needs.
+                Discover why our patients trust and recommend us for their
+                health and support needs.
               </span>
             </div>
 

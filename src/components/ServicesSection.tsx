@@ -69,8 +69,8 @@ export default function ServicesSection() {
           >
             <Card className="h-full">
               <CardContent className="group flex h-full flex-col gap-4 p-6">
-                <span className="flex size-12 rounded-full bg-blue-800/10 p-3">
-                  <service.icon className="mr-4 h-full w-full flex-shrink-0 text-blue-800/85 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
+                <span className="flex size-12 rounded-full bg-yellow-600/10 p-3">
+                  <service.icon className="mr-4 h-full w-full flex-shrink-0 text-yellow-600/85 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
                 </span>
                 <div className="flex items-start">
                   <h3 className="content-center text-xl font-bold">

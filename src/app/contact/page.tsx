@@ -149,7 +149,7 @@ export default function ContactPage() {
                   />
                   <button
                     type="submit"
-                    className="bg-blue-800 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors"
+                    className="rounded-lg bg-yellow-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-yellow-700"
                   >
                     Send
                   </button>
@@ -192,7 +192,7 @@ export default function ContactPage() {
                 variants={itemVariants}
                 className="bg-white p-8 rounded-xl shadow-lg text-left min-w-[300px] max-w-[400px]"
               >
-                <h3 className="text-2xl font-bold text-blue-800 mb-4">
+                <h3 className="text-2xl font-bold text-yellow-800 mb-4">
                   Visit Our Office
                 </h3>
                 <div className="space-y-3 text-gray-600">

@@ -83,30 +83,30 @@ export default function WhyChooseUsSection() {
         </div>
         <div className="content-center">
           {/* a box of 6 icons and plausible company names blue-800/85 background */}
-          <div className="flex flex-col gap-4 bg-blue-800/85 p-12 rounded-3xl mb-5 max-w-screen-sm content-center">
+          <div className="flex flex-col gap-4 bg-yellow-600/85 p-12 rounded-3xl mb-5 max-w-screen-sm content-center">
             <ul className="grid grid-cols-2 gap-4 ">
               <li className="group flex items-center gap-2">
-                <Stethoscope className="h-8 w-8 text-blue-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <Stethoscope className="h-8 w-8 text-yellow-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                 <span className="text-white">High End Consultancy Co.</span>
               </li>
               <li className="group flex items-center gap-2">
-                <Calendar className="h-8 w-8 text-blue-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <Calendar className="h-8 w-8 text-yellow-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                 <span className="text-white">Big Brand Offic.</span>
               </li>
               <li className="group flex items-center gap-2">
-                <Clipboard className="h-8 w-8 text-blue-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <Clipboard className="h-8 w-8 text-yellow-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                 <span className="text-white">Small Business Co.</span>
               </li>
               <li className="group flex items-center gap-2">
-                <Bandage className="h-8 w-8 text-blue-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <Bandage className="h-8 w-8 text-yellow-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                 <span className="text-white">Medium Business Co.</span>
               </li>
               <li className="group flex items-center gap-2">
-                <Bed className="h-8 w-8 text-blue-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <Bed className="h-8 w-8 text-yellow-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                 <span className="text-white">Big Business Co.</span>
               </li>
               <li className="group flex items-center gap-2">
-                <Syringe className="h-8 w-8 text-blue-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <Syringe className="h-8 w-8 text-yellow-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                 <span className="text-white">Small Business Co.</span>
               </li>
             </ul>
@@ -118,12 +118,12 @@ export default function WhyChooseUsSection() {
           <motion.div
             key={index}
             variants={itemVariants}
-            className="border-blue-800/20 *:p-6 last:border-r-0 md:border-r md:*:first:pl-0"
+            className="border-yellow-600/20 *:p-6 last:border-r-0 md:border-r md:*:first:pl-0"
           >
             <div className="group flex h-full flex-col pb-6">
               <div className="flex h-full flex-col items-start">
-                <span className="mb-4 flex size-12 rounded-full bg-blue-800/10 p-3">
-                  <item.icon className="mr-4 h-full w-full flex-shrink-0 text-blue-800/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <span className="mb-4 flex size-12 rounded-full bg-yellow-600/10 p-3">
+                  <item.icon className="mr-4 h-full w-full flex-shrink-0 text-yellow-600/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                 </span>
                 <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>
                 <p className="flex-grow text-start text-gray-600">

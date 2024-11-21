@@ -87,7 +87,7 @@ export default function AboutPage() {
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
 
       <motion.main className="flex flex-grow flex-col md:justify-center z-0 px-4 xl:mx-32 gap-32">
-        {/* <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-blue-200/30 text-black">
+        {/* <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-yellow-200/30 text-black">
           <motion.h1 className="text-5xl font-bold text-black">
             About Us
           </motion.h1>
@@ -185,7 +185,7 @@ export default function AboutPage() {
                   variants={itemVariants}
                   className="group bg-white p-8 rounded-xl shadow-lg text-center min-w-[200px]"
                 >
-                  <h3 className="text-4xl font-bold text-blue-800 group-hover:text-blue-600 group-hover:scale-110 transition-all duration-300">
+                  <h3 className="text-4xl font-bold text-yellow-800 group-hover:text-yellow-600 group-hover:scale-110 transition-all duration-300">
                     {metric.number}
                   </h3>
                   <p className="text-gray-600 mt-2">{metric.label}</p>
@@ -211,7 +211,7 @@ export default function AboutPage() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className={`border-blue-800/20 *:p-6 ${
+                className={`border-yellow-600/20 *:p-6 ${
                   (index + 1) % 3 === 0 || index === services.length - 1
                     ? ""
                     : "md:border-r"
@@ -219,8 +219,8 @@ export default function AboutPage() {
               >
                 <div className="group flex h-full flex-col pb-6">
                   <div className="flex h-full flex-col items-start">
-                    <span className="mb-4 flex size-12 rounded-full bg-blue-800/10 p-3">
-                      <item.icon className="mr-4 h-full w-full flex-shrink-0 text-blue-800/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                    <span className="mb-4 flex size-12 rounded-full bg-yellow-600/10 p-3">
+                      <item.icon className="mr-4 h-full w-full flex-shrink-0 text-yellow-600/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                     </span>
                     <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                     <p className="text-start text-gray-600 flex-grow">
