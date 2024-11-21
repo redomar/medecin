@@ -1,11 +1,11 @@
 // src/components/NavLinks.tsx
 import Link from "next/link";
 
-const navItems = [
+export const navItems = [
   { id: 1, name: "Home", href: "/", part: 1 },
   { id: 2, name: "About us", href: "/about", part: 1 },
   { id: 3, name: "Services", href: "/services", part: 1 },
-  { id: 4, name: "Doctors", href: "/doctors", part: 2 },
+  // { id: 4, name: "Doctors", href: "/doctors", part: 2 },
   { id: 5, name: "Contact", href: "/contact", part: 2 },
 ];
 

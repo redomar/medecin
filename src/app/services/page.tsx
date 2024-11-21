@@ -35,7 +35,7 @@ export default function ServicesPage() {
   const services = isPublic ? services_en : services_fr;
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#00000007]">
+    <div className="flex min-h-screen flex-col bg-[#fffaf1]">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
       <motion.main
         className="flex-grow md:flex-col md:justify-center z-0 px-4 xl:mx-32"
@@ -43,7 +43,7 @@ export default function ServicesPage() {
         animate="visible"
         variants={containerVariants}
       >
-        <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-yellow-200/30 text-black">
+        <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-[#ffd07e]/40 text-black">
           <motion.h1 className="text-5xl font-bold text-black">
             Our Services
           </motion.h1>
@@ -62,7 +62,7 @@ export default function ServicesPage() {
               providing trustworthy and expert care—anywhere, anytime.
             </p>
           </span>
-          <ActionButtons toShowSecondButton={false} />
+          <ActionButtons toShowSecondButton={false} variant="bg-white text-yellow-800" />
         </div>
         <div className="mx-auto grid max-w-screen-xl gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (

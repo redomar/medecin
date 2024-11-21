@@ -15,6 +15,9 @@ import image002 from "../../public/images/image002.jpg";
 // import image003 from "../../public/images/image003.jpg";
 import image004 from "../../public/images/image004.jpg";
 import image005 from "../../public/images/image005.jpg";
+import team1 from "../../public/images/executive-team/team-1.png";
+import team2 from "../../public/images/executive-team/team-2.png";
+import team3 from "../../public/images/executive-team/team-3.png";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -136,42 +139,65 @@ export default function HomePage() {
             <div className="w-full md:col-span-2 md:flex md:items-baseline md:justify-between lg:col-span-3">
               <span className="flex flex-col gap-3">
                 <h1 className="text-3xl font-medium lg:text-5xl">
-                  Our Medical Heroes
+                  Our Leadership Team
                 </h1>
                 <span className="font-light text-gray-600">
-                  We are a team of experienced, registered doctors dedicated to
-                  bringing healthcare to you.
+                  We are a team of experienced, and well-known professionals
+                  dedicated to bringing healthcare to you.
                 </span>
               </span>
               <div className="flex justify-center gap-2">
-                <ActionButtons />
+                {/* <ActionButtons /> */}
               </div>
             </div>
             <motion.div
               variants={itemVariants}
               className="relative grid w-full grid-cols-1 gap-8 md:grid-cols-3"
             >
-              <Image
-                src={image004}
-                alt="placeholder"
-                width={500}
-                height={500}
-                className="rounded-3xl w-full object-cover md:h-[500px]"
-              />
-              <Image
-                src={image005}
-                alt="placeholder"
-                width={500}
-                height={500}
-                className="w-full rounded-3xl object-cover md:h-[500px]"
-              />
-              <Image
-                src={image002}
-                alt="placeholder"
-                width={500}
-                height={500}
-                className="w-full rounded-3xl object-cover md:h-[500px]"
-              />
+              <div className="relative">
+                <Image
+                  src={team1}
+                  alt="placeholder"
+                  width={500}
+                  height={500}
+                  className="rounded-3xl w-full object-cover md:h-[500px]"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent rounded-b-3xl">
+                  <p className="absolute bottom-4 left-4 text-white font-semibold text-xl">
+                    Dr. Mokshad Sharma, CEO
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <Image
+                  src={team2}
+                  alt="placeholder"
+                  width={500}
+                  height={500}
+                  className="w-full rounded-3xl object-cover md:h-[500px]"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent rounded-b-3xl">
+                  <p className="absolute bottom-4 left-4 text-white font-semibold text-xl">
+                    Dr. Yasheel Aukhojee, Director
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <Image
+                  src={team3}
+                  alt="placeholder"
+                  width={500}
+                  height={500}
+                  className="w-full rounded-3xl object-cover md:h-[500px]"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent rounded-b-3xl">
+                  <p className="absolute bottom-4 left-4 text-white font-semibold text-xl">
+                    Dr. Khushyant Mungar, Director
+                  </p>
+                </div>
+              </div>
             </motion.div>
           </motion.section>
 
@@ -240,7 +266,7 @@ export default function HomePage() {
                     className="h-64 w-full rounded-3xl object-cover lg:h-[300px]"
                   />
                   <div className="flex items-baseline gap-4 text-xs lg:text-base">
-                    <h3 className="mb-1 w-fit rounded-full bg-yellow-600/85 px-3 py-1 font-bold text-white">
+                    <h3 className="mb-1 w-fit rounded-full bg-[#ffe9c6] px-3 py-1 font-bold text-black">
                       {news.topic}
                     </h3>
                     <p className="text-lg font-semibold text-gray-600">

@@ -122,8 +122,8 @@ export default function WhyChooseUsSection() {
           >
             <div className="group flex h-full flex-col pb-6">
               <div className="flex h-full flex-col items-start">
-                <span className="mb-4 flex size-12 rounded-full bg-yellow-600/10 p-3">
-                  <item.icon className="mr-4 h-full w-full flex-shrink-0 text-yellow-600/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <span className="mb-4 flex size-12 rounded-full  bg-[#ffe9c6] p-3">
+                  <item.icon className="mr-4 h-full w-full flex-shrink-0 text-yellow-600 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                 </span>
                 <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>
                 <p className="flex-grow text-start text-gray-600">

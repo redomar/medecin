@@ -1,19 +1,12 @@
-import ActionButtons from "./ActionButtons";
-import { Button } from "./ui/button";
-import ImgLogo from "../../public/images/MAD.png";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { Facebook, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import ImgLogo from "../../public/images/MAD.png";
+import ActionButtons from "./ActionButtons";
+import { navItems } from "./NavLinks";
+import { Button } from "./ui/button";
 
 // src/components/Footer.tsx
-// Data
-const menuItems = [
-  { id: "home", label: "Home" },
-  { id: "about", label: "About Us" },
-  { id: "services", label: "Services" },
-  { id: "contact", label: "Contact Us" },
-];
 
 const policyItems = ["Terms & Conditions", "Privacy Policy", "Licenses"];
 
@@ -23,16 +16,8 @@ const contactInfo = {
   phone: "(487) 120-7080",
 };
 
-const navLinks = ["Home", "About", "Services", "Contact"];
-
 // Component
 export default function Footer() {
-  const router = useRouter();
-
-  const handleNavigate = (id: string) => {
-    router.replace(`/${id}`);
-  };
-
   return (
     <footer className="relative mt-48 block h-full w-full text-white">
       <div className="flex w-full justify-center gap-32 ">
@@ -95,10 +80,12 @@ export default function Footer() {
             <div className="flex max-w-40 flex-col gap-6">
               <h3 className="text-lg font-medium uppercase">Menu</h3>
               <div className="flex flex-col items-start gap-1 *:w-full *:py-1 *:text-left">
-                {menuItems.map(({ id, label }) => (
-                  <button key={id} onMouseDown={() => handleNavigate(id)}>
-                    {label}
-                  </button>
+                {navItems.map(({ id, name, href }) => (
+                  <Link key={id} href={href}>
+                    <button key={id} onMouseDown={() => href}>
+                      {name}
+                    </button>
+                  </Link>
                 ))}
               </div>
             </div>

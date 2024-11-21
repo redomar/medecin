@@ -149,7 +149,7 @@ export default function ContactPage() {
                   />
                   <button
                     type="submit"
-                    className="rounded-lg bg-yellow-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-yellow-700"
+                    className="rounded-lg  bg-[#ffe9c6] px-6 py-3 font-semibold text-yellow-800 transition-colors hover:bg-yellow-500"
                   >
                     Send
                   </button>
