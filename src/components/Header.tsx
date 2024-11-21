@@ -42,7 +42,7 @@ export default function Header({
             </div>
           </div>
           <span>Emergency: 193</span>
-          <span>Hotline: 86121</span>
+          <span>Hotline: 86121 / <span>58017777</span> </span>
         </div>
       </div>
       <div className="sticky top-0 z-50 flex h-[5.265rem] items-center justify-between px-4 md:mx-32 md:mb-5 md:mt-1 md:px-6">
@@ -50,15 +50,17 @@ export default function Header({
           <NavLinks part={1} />
         </nav>
 
-        <Link href="/" className="flex h-full flex-1 items-center justify-center">
+        <Link
+          href="/"
+          className="flex h-full flex-1 items-center justify-center"
+        >
           <Image
             src={ImgLogo}
             onMouseDown={() => {
               // navigate to home page
-              
             }}
             alt="Home Doctor Logo"
-            className="relative mr-10 h-8 w-fit hue-rotate-[-160deg] brightness-90"
+            className="relative mr-10 h-8 w-fit"
           />
         </Link>
 

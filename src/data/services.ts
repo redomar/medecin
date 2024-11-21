@@ -37,12 +37,6 @@ const services = [
     icon: Building,
   },
   {
-    title: "Specialist Medical Care",
-    description:
-      "Specialist healthcare delivered to your home. From cardiologists to endocrinologists, we connect you with experts delivered by our partners.",
-    icon: UserCog,
-  },
-  {
     title: "Postoperative Care",
     description:
       "Home-based support for post-surgery recovery. Our services include wound care, pain management, and follow-up consultations to aid your healing.",

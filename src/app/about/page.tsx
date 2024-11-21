@@ -39,7 +39,8 @@ const itemVariants = {
 
 const metrics = [
   { number: "5K+", label: "Households Trust Us" },
-  { number: "800+", label: "Monthly Consultations " },
+  { number: "96%", label: "Clients Recommend Us" },
+  { number: "5", label: "Star Rating" },
 ];
 
 const services = [
@@ -174,10 +175,10 @@ export default function AboutPage() {
             alt="Medical facility wide"
             width={1600}
             height={600}
-            className="rounded-3xl w-full h-[400px] object-cover"
+            className="rounded-3xl h-[400px] object-cover"
           />
           <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2">
-            <div className="grid lg:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-3 gap-8">
               {metrics.map((metric, index) => (
                 <motion.div
                   key={index}

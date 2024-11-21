@@ -70,11 +70,11 @@ export default function Footer() {
           <div className="flex flex-col gap-12 w-full sm:flex-row *:lg:min-w-52 max-w-screen-xl justify-self-center mt-16">
             <div className="mb-4 md:mb-0 lg:w-full">
               <Link href="/">
-              <Image
-                src={ImgLogo}
-                alt="Home Doctor Logo"
-                className="relative mr-10 h-12 w-fit hue-rotate-[-160deg] brightness-90"
-              />
+                <Image
+                  src={ImgLogo}
+                  alt="Home Doctor Logo"
+                  className="relative mr-10 h-12 w-fit"
+                />
               </Link>
 
               {/* Add social media icons here */}
