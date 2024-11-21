@@ -99,7 +99,7 @@ export default function HomePage() {
             variants={containerVariants}
           >
             <motion.div
-              className="flex flex-col gap-8 rounded-3xl bg-yellow-600/85 px-6 py-8 text-white md:p-10 lg:h-[756px] lg:justify-center xl:h-[666px]"
+              className="flex flex-col gap-8 rounded-3xl bg-[#ffe9c6] px-6 py-8 text-black md:p-10 lg:h-[756px] lg:justify-center xl:h-[666px]"
               variants={itemVariants}
             >
               <h1 className="text-3xl font-semibold md:text-5xl lg:mb-3 lg:text-6xl">
@@ -194,14 +194,14 @@ export default function HomePage() {
                 className="absolute -top-60 hidden h-[300px] w-[300px] rounded-3xl md:block lg:object-cover xl:-inset-20"
               />
               <div className="h-full w-full px-20">
-                <div className="p-2gap-8 flex h-[460px] w-full flex-col items-center justify-center rounded-3xl bg-yellow-600/85 text-white">
+                <div className="p-2gap-8 flex h-[460px] w-full flex-col items-center justify-center rounded-3xl bg-[#9ADBCC] text-black">
                   <h2 className="text-center text-2xl md:text-4xl lg:text-5xl">
                     Take the first step <br /> toward better health!
                   </h2>
-                  <span className="max-w-md text-center text-sm text-gray-50/80">
+                  <span className="max-w-md text-center text-sm text-black">
                     Get support anytime—reach out to our 24/7 hotline today!
                   </span>
-                  <ActionButtons variant="" />
+                  <ActionButtons variant="bg-white" />
                 </div>
               </div>
               <Image

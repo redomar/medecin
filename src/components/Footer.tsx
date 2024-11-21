@@ -37,7 +37,7 @@ export default function Footer() {
     <footer className="relative mt-48 block h-full w-full text-white">
       <div className="flex w-full justify-center gap-32 ">
         <div className="relative w-[500px]">
-          <div className="absolute -top-24 hidden h-full w-full flex-col justify-between gap-4 rounded-3xl lg:h-60 bg-yellow-800 p-8 lg:flex">
+          <div className="absolute -top-24 hidden h-full w-full flex-col justify-between gap-4 rounded-3xl lg:h-60 bg-[#9ADBCC] text-black p-8 lg:flex">
             <span>
               <h1 className="self-start text-4xl font-semibold">
                 You stay at home
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="relative w-[500px] text-black">
-          <div className="absolute -top-24 hidden h-full w-full flex-col justify-between gap-4 rounded-3xl lg:h-60 bg-yellow-400 p-8 lg:flex">
+          <div className="absolute -top-24 hidden h-full w-full flex-col justify-between gap-4 rounded-3xl lg:h-60 bg-[#ffe9c6] p-8 lg:flex">
             <h2 className="text-3xl font-bold">
               We&apos;re here for you when you need us.
             </h2>

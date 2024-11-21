@@ -83,31 +83,31 @@ export default function WhyChooseUsSection() {
         </div>
         <div className="content-center">
           {/* a box of 6 icons and plausible company names blue-800/85 background */}
-          <div className="flex flex-col gap-4 bg-yellow-600/85 p-12 rounded-3xl mb-5 max-w-screen-sm content-center">
+          <div className="flex flex-col gap-4 bg-[#9ADBCC] p-12 rounded-3xl mb-5 max-w-screen-sm content-center">
             <ul className="grid grid-cols-2 gap-4 ">
               <li className="group flex items-center gap-2">
-                <Stethoscope className="h-8 w-8 text-yellow-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
-                <span className="text-white">High End Consultancy Co.</span>
+                <Stethoscope className="h-8 w-8 text-black transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <span className="text-black">High End Consultancy Co.</span>
               </li>
               <li className="group flex items-center gap-2">
-                <Calendar className="h-8 w-8 text-yellow-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
-                <span className="text-white">Big Brand Offic.</span>
+                <Calendar className="h-8 w-8 text-black transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <span className="text-black">Big Brand Offic.</span>
               </li>
               <li className="group flex items-center gap-2">
-                <Clipboard className="h-8 w-8 text-yellow-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
-                <span className="text-white">Small Business Co.</span>
+                <Clipboard className="h-8 w-8 text-black transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <span className="text-black">Small Business Co.</span>
               </li>
               <li className="group flex items-center gap-2">
-                <Bandage className="h-8 w-8 text-yellow-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
-                <span className="text-white">Medium Business Co.</span>
+                <Bandage className="h-8 w-8 text-black transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <span className="text-black">Medium Business Co.</span>
               </li>
               <li className="group flex items-center gap-2">
-                <Bed className="h-8 w-8 text-yellow-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
-                <span className="text-white">Big Business Co.</span>
+                <Bed className="h-8 w-8 text-black transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <span className="text-black">Big Business Co.</span>
               </li>
               <li className="group flex items-center gap-2">
-                <Syringe className="h-8 w-8 text-yellow-300/85 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
-                <span className="text-white">Small Business Co.</span>
+                <Syringe className="h-8 w-8 text-black transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
+                <span className="text-black">Small Business Co.</span>
               </li>
             </ul>
           </div>
