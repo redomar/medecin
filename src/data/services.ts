@@ -9,6 +9,7 @@ import {
   UserCog,
   Bed,
   Syringe,
+  Ambulance,
 } from "lucide-react";
 
 const services = [
@@ -29,6 +30,24 @@ const services = [
     description:
       "Immediate medical attention for non-critical emergencies, directly to you. Our urgent care avoids hospital delays and provides fast, effective treatment.",
     icon: Clipboard,
+  },
+  {
+    title: "Hydravit Therapy",
+    description:
+      "Specialised IV vitamin therapy for chronic fatigue, glowing skin, and overall wellness.",
+    icon: Syringe,
+  },
+  {
+    title: "Blood Sampling",
+    description:
+      "Blood sampling and consultations in collaboration with a leading Mauritius lab, available at our Moka office.",
+    icon: Clipboard,
+  },
+  {
+    title: "Ambulance Service",
+    description:
+      "Safe patient transfers between homes and hospitals or hospital-to-hospital, including non-emergency trips. Fully equipped with ACLS systems.",
+    icon: Ambulance,
   },
   {
     title: "Corporate Care",
