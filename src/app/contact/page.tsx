@@ -101,7 +101,7 @@ export default function ContactPage() {
 
   const toggleFaq = (index: number) => {
     setOpenFaqs((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index],
     );
   };
 

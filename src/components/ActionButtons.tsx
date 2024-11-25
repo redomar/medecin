@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function ActionButtons({
   variant = "bg-secondary text-secondary-dark",
+  secondVariant = "",
   toShowSecondButton = true,
 }) {
   return (
@@ -22,7 +23,7 @@ export default function ActionButtons({
           <Button
             variant="ghost"
             noHover={true}
-            className="text-sm rounded-full py-6 px-8 w-full sm:w-auto group"
+            className={`text-sm rounded-full py-6 px-8 w-full sm:w-auto group ${secondVariant}`}
           >
             Our Services
             <span className="ml-2 p-1 border border-accent rounded-full">

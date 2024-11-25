@@ -18,11 +18,10 @@ export default function Header({
   return (
     <header>
       <div className="hidden max-w-full bg-[#ffd07e] px-14 text-black md:px-32 lg:flex">
-        <div className="flex w-full items-baseline justify-between px-6 py-6">
-          <span>No. 1 Homecare Service in Mauritius</span>
-          <span></span>
-          <div className="flex items-center gap-2">
-            <div className="flex items-center rounded-full bg-[#ffdd9a] p-1">
+        <div className="flex w-full items-baseline justify-between px-6 py-6 *:min-w-64">
+          <div>No. 1 Homecare Service in Mauritius</div>
+          <div className="flex justify-center w-full">
+            <div className=" rounded-full self-center bg-[#ffdd9a] p-1 w-fit ">
               <button
                 className={`rounded-full px-3 py-1 text-sm transition-all ${
                   isPublic ? "bg-white text-yellow-800" : "text-black"
@@ -41,31 +40,31 @@ export default function Header({
               </button>
             </div>
           </div>
-          <span>Hotline: <Link href="tel:86121">86121</Link></span>
-          <span>Emergency: <Link href="tel:193">193</Link></span>
+          <div className="text-right">
+            Emergency: <Link href="tel:193">193</Link>
+          </div>
         </div>
       </div>
-      <div className="sticky top-0 z-50 flex h-[5.265rem] items-center justify-between px-4 md:mx-32 md:mb-5 md:mt-1 md:px-6">
-        <nav className="hidden font-medium md:flex md:items-center md:gap-5 lg:gap-6">
-          <NavLinks part={1} />
-        </nav>
-
-        <Link
-          href="/"
-          className="flex h-full flex-1 items-center justify-center"
-        >
+      <div className="sticky top-0 z-50 flex h-[5.265rem] items-center justify-between px-4 md:mx-32 md:mb-5 md:mt-3 md:px-6">
+        <Link href="/" className="flex h-full  items-center ">
           <Image
             src={ImgLogo}
             onMouseDown={() => {
               // navigate to home page
             }}
             alt="Home Doctor Logo"
-            className="relative mr-10 h-8 w-fit"
+            className="relative mr-10 h-16 w-fit"
           />
         </Link>
+        <nav className="hidden font-medium md:flex md:items-center md:gap-5 lg:gap-6 justify-center md:-ml-24">
+          <NavLinks part={1} />
+          <NavLinks part={2} />
+        </nav>
 
         <nav className="hidden font-medium md:flex md:items-center md:gap-5 lg:gap-6">
-          <NavLinks part={2} />
+          <span className="px-8 py-3 bg-secondary text-black font-semibold 2xl:font-bold rounded-full cursor-pointer text-lg shadow-md hover:translate-y-1">
+            Hotline: <Link href="tel:86121">86121</Link>
+          </span>
         </nav>
 
         <div className="flex items-center md:hidden">

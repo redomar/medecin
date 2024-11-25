@@ -19,7 +19,7 @@ const contactInfo = {
 // Component
 export default function Footer() {
   return (
-    <footer className="relative mt-48 block h-full w-full text-white">
+    <footer className="relative mt-64 block h-full w-full text-white">
       <div className="flex w-full justify-center gap-32 ">
         <div className="relative w-[500px]">
           <div className="absolute -top-24 hidden h-full w-full flex-col justify-between gap-4 rounded-3xl lg:h-60 bg-secondary text-black p-8 lg:flex">

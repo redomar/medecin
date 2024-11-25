@@ -5,8 +5,9 @@ export const navItems = [
   { id: 1, name: "Home", href: "/", part: 1 },
   { id: 2, name: "About us", href: "/about", part: 1 },
   { id: 3, name: "Services", href: "/services", part: 1 },
-  // { id: 4, name: "Doctors", href: "/doctors", part: 2 },
-  { id: 5, name: "Contact", href: "/contact", part: 2 },
+  { id: 4, name: "Team", href: "/teams", part: 2 },
+  { id: 5, name: "CEO", href: "/teams", part: 2 },
+  { id: 6, name: "Contact", href: "/contact", part: 2 },
 ];
 
 export default function NavLinks({ part = 0 }: { part?: number }) {
@@ -18,7 +19,7 @@ export default function NavLinks({ part = 0 }: { part?: number }) {
           <Link
             key={item.id}
             href={item.href}
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="text-muted-foreground transition-colors hover:text-foreground hover:scale-110 hover:underline"
           >
             {item.name}
           </Link>

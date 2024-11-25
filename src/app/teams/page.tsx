@@ -69,7 +69,7 @@ const doctors = [
   },
 ];
 
-export default function DoctorsPage() {
+export default function TeamsPage() {
   const [isPublic, setIsPublic] = useState(true);
   return (
     <div className="flex flex-col min-h-screen">
@@ -83,10 +83,10 @@ export default function DoctorsPage() {
         <div className="mx-auto max-w-screen-xl">
           <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-yellow-200/30 text-black">
             <motion.h1 className="text-5xl font-bold text-black">
-              Our Doctors
+              Our Team
             </motion.h1>
             <span className="flex max-w-screen-md flex-col gap-4 px-4 font-light text-gray-600">
-              <p>
+              {/* <p>
                 Our team of experienced doctors and healthcare experts follow
                 evidence-based medicine and international guidelines. Providing
                 personalised care wherever you are—at home, in the office, or on
@@ -95,7 +95,7 @@ export default function DoctorsPage() {
                 We guarantee your health is in trusted hands, offering comfort,
                 convenience, and the highest quality of medical attention
                 whenever you need us.
-              </p>
+              </p> */}
             </span>
             <ActionButtons toShowSecondButton={false} />
           </div>
