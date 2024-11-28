@@ -13,7 +13,7 @@ export default function ActionButtons({
       <Link href="/contact">
         <Button
           variant="secondary"
-          className={`text-sm w-full rounded-full px-8 py-6 font-extrabold text-secondary-dark sm:w-auto ${variant}`}
+          className={`text-sm 2xl:text-xl w-full rounded-full px-8 py-6 font-extrabold text-secondary-dark sm:w-auto ${variant}`}
         >
           Book Now
         </Button>
@@ -23,7 +23,7 @@ export default function ActionButtons({
           <Button
             variant="ghost"
             noHover={true}
-            className={`text-sm rounded-full py-6 px-8 w-full sm:w-auto group ${secondVariant}`}
+            className={`text-sm 2xl:text-xl rounded-full py-6 px-8 w-full sm:w-auto group ${secondVariant}`}
           >
             Our Services
             <span className="ml-2 p-1 border border-accent rounded-full">

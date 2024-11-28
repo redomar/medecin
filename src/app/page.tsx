@@ -85,10 +85,10 @@ export default function HomePage() {
   const contactInView = useInView(contactRef, { once: false });
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col 2xl:text-xl">
       <Header isPublic={isPublic} setIsPublic={setIsPublic} />
       <span>
-        <main className="z-0 flex flex-grow gap-32 px-4 flex-col justify-self-center xl:mx-32 2xl:mt-10">
+        <main className="z-0 flex flex-grow flex-col items-center gap-32 *:px-4 xl:mx-32 2xl:mt-10">
           <motion.section
             ref={heroRef}
             className="grid max-w-screen-xl grid-cols-1 gap-8 justify-self-center lg:grid-cols-2 xl:justify-center"
@@ -97,13 +97,13 @@ export default function HomePage() {
             variants={containerVariants}
           >
             <motion.div
-              className="flex flex-col gap-8 rounded-3xl px-6 py-8 text-black md:p-10 lg:h-[756px] lg:justify-center xl:h-[666px]"
+              className="flex flex-col gap-8 rounded-3xl py-8 text-black  lg:h-[756px] lg:justify-center xl:h-[666px]"
               variants={itemVariants}
             >
               <h1 className="text-3xl font-semibold md:text-5xl lg:mb-3 lg:text-6xl">
                 Compassionate Care, Right at Home.
               </h1>
-              <p className="font-medium 2xl:text-lg">
+              <p className="font-medium 2xl:text-2xl">
                 We&apos;re here for you 24/7, offering the best care Mauritius
                 has to offer. With a deep trust and compassion, we&apos;re
                 committed to supporting your well-being every step of the way,
@@ -153,31 +153,31 @@ export default function HomePage() {
               variants={itemVariants}
               className="relative grid w-full grid-cols-1 gap-8 md:grid-cols-3"
             >
-              <div className="relative overflow-hidden rounded-3xl group">
+              <div className="group relative overflow-hidden rounded-3xl">
                 <Image
                   src={team1}
                   alt="placeholder"
                   width={500}
                   height={500}
-                  className="rounded-3xl w-full object-cover md:h-[500px] transition-transform duration-300 group-hover:scale-110"
+                  className="w-full rounded-3xl object-cover transition-transform duration-300 group-hover:scale-110 md:h-[500px]"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent rounded-b-3xl">
-                  <p className="absolute bottom-4 left-4 text-white font-semibold text-xl cursor-default">
+                <div className="absolute inset-x-0 bottom-0 h-1/3 rounded-b-3xl bg-gradient-to-t from-black/70 to-transparent">
+                  <p className="absolute bottom-4 left-4 cursor-default text-xl font-semibold text-white">
                     Dr. Mokshad Sharma, Director
                   </p>
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-3xl group">
+              <div className="group relative overflow-hidden rounded-3xl">
                 <Image
                   src={team2}
                   alt="placeholder"
                   width={500}
                   height={500}
-                  className="rounded-3xl w-full object-cover md:h-[500px] transition-transform duration-300 group-hover:scale-110"
+                  className="w-full rounded-3xl object-cover transition-transform duration-300 group-hover:scale-110 md:h-[500px]"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent rounded-b-3xl">
-                  <p className="absolute bottom-4 left-4 text-white font-semibold text-xl cursor-default">
+                <div className="absolute inset-x-0 bottom-0 h-1/3 rounded-b-3xl bg-gradient-to-t from-black/70 to-transparent">
+                  <p className="absolute bottom-4 left-4 cursor-default text-xl font-semibold text-white">
                     Dr. Yasheel Aukhojee, CEO
                   </p>
                 </div>
@@ -189,10 +189,10 @@ export default function HomePage() {
                   alt="placeholder"
                   width={500}
                   height={500}
-                  className="rounded-3xl w-full object-cover md:h-[500px] transition-transform duration-300 group-hover:scale-110"
+                  className="w-full rounded-3xl object-cover transition-transform duration-300 group-hover:scale-110 md:h-[500px]"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent rounded-b-3xl">
-                  <p className="absolute bottom-4 left-4 text-white font-semibold text-xl cursor-default">
+                <div className="absolute inset-x-0 bottom-0 h-1/3 rounded-b-3xl bg-gradient-to-t from-black/70 to-transparent">
+                  <p className="absolute bottom-4 left-4 cursor-default text-xl font-semibold text-white">
                     Dr. Khushyant Mungar, Director
                   </p>
                 </div>
@@ -319,14 +319,15 @@ export default function HomePage() {
                   <div className="absolute right-2 top-2">
                     <h3 className="text-xl lg:text-2xl">01</h3>
                   </div>
-                  <div className="flex w-full max-w-sm items-center p-5 text-lg font-semibold">
-                    These are some of the Mauritius&apos;s best doctors. They
-                    are professionals who have been working in the field for
-                    many years. They are very knowledgeable and have a lot of
-                    experience in treating patients. Amazing people!
-                  </div>
+                  <p className="flex w-full max-w-sm items-center p-5 text-xl font-semibold italic">
+                    <q>
+                      These are some of the Mauritius&apos;s best doctors. They
+                      are professionals who have been working in the field for
+                      many years. They are very knowledgeable and have a lot of
+                      experience in treating patients. Amazing people!
+                    </q>
+                  </p>
                 </div>
-
                 <div className="relative flex h-full w-[700px] flex-shrink-0 gap-4 rounded-3xl border bg-white">
                   <Image
                     src="https://picsum.photos/920/921"
@@ -338,12 +339,14 @@ export default function HomePage() {
                   <div className="absolute right-2 top-2">
                     <h3 className="text-xl lg:text-2xl">02</h3>
                   </div>
-                  <div className="flex w-full max-w-sm items-center p-5 text-xl font-bold">
-                    These are some of the Mauritius&apos;s best doctors. They
-                    are professionals who have been working in the field for
-                    many years. They are very knowledgeable and have a lot of
-                    experience in treating patients. Amazing people!
-                  </div>
+                  <p className="flex w-full max-w-sm items-center p-5 text-xl font-semibold italic">
+                    <q>
+                      These are some of the Mauritius&apos;s best doctors. They
+                      are professionals who have been working in the field for
+                      many years. They are very knowledgeable and have a lot of
+                      experience in treating patients. Amazing people!
+                    </q>
+                  </p>
                 </div>
               </div>
 

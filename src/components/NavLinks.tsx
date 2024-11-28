@@ -19,7 +19,7 @@ export default function NavLinks({ part = 0 }: { part?: number }) {
           <Link
             key={item.id}
             href={item.href}
-            className="text-muted-foreground transition-colors hover:text-foreground hover:scale-110 hover:underline"
+            className="text-muted-foreground transition-colors hover:text-foreground lg:hover:scale-110 hover:underline"
           >
             {item.name}
           </Link>

@@ -60,31 +60,31 @@ const items = [
 export default function WhyChooseUsSection() {
   return (
     <motion.section
-      className="flex max-w-screen-xl flex-col justify-self-center "
+      className="flex max-w-screen-xl flex-col justify-self-center"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
     >
-      <div className="flex flex-col lg:flex-row justify-between min-h-96 gap-8 items-center">
-        <div className="max-w-96 self-center flex flex-col gap-4">
+      <div className="flex min-h-96 flex-col items-center justify-between gap-8 lg:flex-row">
+        <div className="flex flex-col gap-4 self-center lg:max-w-96">
           <motion.h1
             className="text-3xl font-medium lg:text-5xl"
             variants={itemVariants}
           >
             Why Choose Us?
           </motion.h1>
-          <p className="text-gray-600 font-light">
+          <p className="font-light text-gray-600">
             Choose us for 24/7 consultation and a dedicated hotline. With a
             5-star rating and 96% of our clients recommending us, we are the no.
             1 homecare service in mauritius.
           </p>
           <ActionButtons />
         </div>
-        <div className="content-center">
+        <div className="w-full content-center lg:w-auto">
           {/* a box of 6 icons and plausible company names blue-800/85 background */}
-          <div className="flex flex-col gap-4 bg-secondary p-12 rounded-3xl mb-5 max-w-screen-sm content-center">
-            <ul className="grid grid-cols-2 gap-4 ">
+          <div className="mb-5 flex flex-col content-center gap-4 rounded-3xl bg-secondary p-12 lg:max-w-screen-sm">
+            <ul className="grid grid-cols-2 gap-4">
               <li className="group flex items-center gap-2">
                 <Stethoscope className="h-8 w-8 text-black transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                 <span className="text-black">High End Consultancy Co.</span>
@@ -113,7 +113,7 @@ export default function WhyChooseUsSection() {
           </div>
         </div>
       </div>
-      <div className="grid gap-8 md:grid-cols-3 ">
+      <div className="grid gap-8 md:grid-cols-3">
         {items.map((item, index) => (
           <motion.div
             key={index}
@@ -122,7 +122,7 @@ export default function WhyChooseUsSection() {
           >
             <div className="group flex h-full flex-col pb-6">
               <div className="flex h-full flex-col items-start">
-                <span className="mb-4 flex size-12 rounded-full  bg-primary p-3">
+                <span className="mb-4 flex size-12 rounded-full bg-primary p-3">
                   <item.icon className="mr-4 h-full w-full flex-shrink-0 text-yellow-600 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                 </span>
                 <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>

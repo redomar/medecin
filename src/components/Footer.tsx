@@ -20,9 +20,9 @@ const contactInfo = {
 export default function Footer() {
   return (
     <footer className="relative mt-64 block h-full w-full text-white">
-      <div className="flex w-full justify-center gap-32 ">
+      <div className="flex w-full justify-center gap-32">
         <div className="relative w-[500px]">
-          <div className="absolute -top-24 hidden h-full w-full flex-col justify-between gap-4 rounded-3xl lg:h-60 bg-secondary text-black p-8 lg:flex">
+          <div className="absolute -top-24 hidden h-full w-full flex-col justify-between gap-4 rounded-3xl bg-secondary p-8 text-black lg:flex lg:h-60">
             <span>
               <h1 className="self-start text-4xl font-semibold">
                 You stay at home
@@ -38,11 +38,11 @@ export default function Footer() {
           </div>
         </div>
         <div className="relative w-[500px] text-black">
-          <div className="absolute -top-24 hidden h-full w-full flex-col justify-between gap-4 rounded-3xl lg:h-60 bg-primary p-8 lg:flex">
+          <div className="absolute -top-24 hidden h-full w-full flex-col justify-between gap-4 rounded-3xl bg-primary p-8 lg:flex lg:h-60">
             <h2 className="text-3xl font-bold">
               We&apos;re here for you when you need us.
             </h2>
-            <span className="flex flex-col sm:flex-row gap-4 mt-6">
+            <span className="mt-6 flex flex-col gap-4 sm:flex-row">
               <Link href="/contact">
                 <Button
                   variant="secondary"
@@ -56,8 +56,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="bg-black">
-        <div className="bg-yellow-950/50 px-4 py-8 md:px-6 xl:px-48 lg:pt-36">
-          <div className="flex flex-col gap-12 w-full sm:flex-row *:lg:min-w-52 max-w-screen-xl justify-self-center mt-16">
+        <div className="bg-yellow-950/50 px-4 py-8 md:px-6 lg:pt-36 xl:px-48">
+          <div className="mt-16 flex w-full max-w-screen-xl flex-col gap-12 justify-self-center sm:flex-row *:lg:min-w-52">
             <div className="mb-4 md:mb-0 lg:w-full">
               <Link href="/">
                 <Image

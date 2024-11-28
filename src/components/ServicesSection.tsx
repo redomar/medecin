@@ -37,7 +37,7 @@ export default function ServicesSection() {
       variants={containerVariants}
     >
       <motion.div
-        className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.3fr,1fr,1fr] "
+        className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.3fr,1fr,1fr]"
         variants={containerVariants}
       >
         <motion.div
@@ -70,7 +70,7 @@ export default function ServicesSection() {
             <Card className="h-full">
               <CardContent className="group flex h-full flex-col gap-4 p-6">
                 <span className="flex size-12 rounded-full bg-primary p-3">
-                  <service.icon className="mr-4 h-full w-full flex-shrink-0 text-yellow-600 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
+                  <service.icon className="mr-4 h-full w-full flex-shrink-0 text-yellow-600 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                 </span>
                 <div className="flex items-start">
                   <h3 className="content-center text-xl font-bold">
