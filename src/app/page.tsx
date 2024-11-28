@@ -15,6 +15,7 @@ import team3 from "../../public/images/executive-team/team-3.png";
 import image001 from "../../public/images/image001.jpg";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import LogoSection from "@/components/LogoSection";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -125,6 +126,7 @@ export default function HomePage() {
             </motion.div>
           </motion.section>
 
+          <LogoSection />
           <ServicesSection />
           <WhyChooseUsSection />
 
@@ -295,7 +297,6 @@ export default function HomePage() {
                 health and support needs.
               </span>
             </div>
-
             <div className="relative">
               <button
                 onClick={() => scroll("left")}
@@ -303,7 +304,6 @@ export default function HomePage() {
               >
                 <ChevronLeft className="h-6 w-6" />
               </button>
-
               <div
                 ref={scrollContainerRef}
                 className="flex gap-4 overflow-hidden scroll-smooth"
@@ -349,7 +349,6 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
-
               <button
                 onClick={() => scroll("right")}
                 className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md hover:bg-white"
