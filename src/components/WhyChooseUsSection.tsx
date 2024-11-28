@@ -84,7 +84,7 @@ export default function WhyChooseUsSection() {
         <div className="w-full content-center lg:w-auto">
           {/* a box of 6 icons and plausible company names blue-800/85 background */}
           <div className="mb-5 flex flex-col content-center gap-4 rounded-3xl bg-secondary p-12 lg:max-w-screen-sm">
-            <ul className="grid grid-cols-2 gap-4">
+            <ul className="grid grid-cols-2 gap-12">
               <li className="group flex items-center gap-2">
                 <Stethoscope className="h-8 w-8 text-black transition-all duration-300 group-hover:rotate-6 group-hover:scale-110" />
                 <span className="text-black">High End Consultancy Co.</span>

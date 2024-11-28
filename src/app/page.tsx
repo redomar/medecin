@@ -126,7 +126,7 @@ export default function HomePage() {
             </motion.div>
           </motion.section>
 
-          <LogoSection />
+          {!isPublic && <LogoSection />}
           <ServicesSection />
           <WhyChooseUsSection />
 
