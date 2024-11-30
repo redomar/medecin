@@ -204,41 +204,91 @@ export default function HomePage() {
 
           <motion.section
             ref={contactRef}
-            className="hidden h-full w-full flex-row gap-8 justify-self-center md:max-w-screen-lg lg:flex lg:px-10 xl:max-w-screen-xl xl:px-20"
+            className={`w-full max-w-screen-xl justify-self-center ${!isPublic ? "" : "hidden"}`}
             initial="hidden"
             animate={contactInView ? "visible" : "hidden"}
             variants={containerVariants}
           >
-            <motion.div
-              variants={itemVariants}
-              className="relative my-32 h-full w-full"
-            >
-              <Image
-                src="https://picsum.photos/301/300/"
-                alt="placeholder"
-                width={300}
-                height={300}
-                className="absolute -top-60 hidden h-[300px] w-[300px] rounded-3xl md:block lg:object-cover xl:-inset-20"
-              />
-              <div className="h-full w-full px-20">
-                <div className="p-2gap-8 flex h-[460px] w-full flex-col items-center justify-center rounded-3xl bg-secondary text-black">
-                  <h2 className="text-center text-2xl md:text-4xl lg:text-5xl">
-                    Take the first step <br /> toward better health!
+            <div className="max-w-8xl mx-auto flex flex-col md:flex-row gap-16 md:gap-12 bg-stone-800 text-white rounded-3xl w-full  p-20">
+              {/* Left side content */}
+              <motion.div
+                variants={itemVariants}
+                className="flex-1 flex items-center justify-center"
+              >
+                <div className="md:sticky md:top-20">
+                  <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl mb-6">
+                    Your Corporate Care Journey
                   </h2>
-                  <span className="max-w-md text-center text-sm text-black">
-                    Get support anytime—reach out to our 24/7 hotline today!
-                  </span>
-                  <ActionButtons variant="bg-white" />
+                  <p className="text-gray-400 max-w-md">
+                    Reach out to us to book an appointment within minutes with
+                    our simple 3-step process
+                  </p>
+                  <div className="mt-8">
+                    <ActionButtons variant="bg-white" />
+                  </div>
                 </div>
-              </div>
-              <Image
-                src="https://picsum.photos/300/300/"
-                alt="placeholder"
-                width={300}
-                height={300}
-                className="absolute -bottom-48 right-0 hidden h-[300px] w-[300px] rounded-3xl md:block lg:object-cover xl:-bottom-20 xl:-right-20"
-              />
-            </motion.div>
+              </motion.div>
+
+              {/* Right side timeline */}
+              <motion.div
+                variants={itemVariants}
+                className="relative flex-1 min-h-[400px] md:min-h-0"
+              >
+                {/* Vertical Line */}
+                <div className="absolute left-[15px] top-0 h-5/6 w-[2px] bg-accent" />
+
+                {/* Timeline Items */}
+                <div className="space-y-16 md:space-y-20">
+                  {/* Step 1 */}
+                  <div className="flex items-start gap-6">
+                    <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-medium text-black">
+                      1
+                    </div>
+                    <div className="flex-1 pt-1">
+                      <h3 className="text-lg font-medium text-gray-100 mb-2">
+                        Corporate Login
+                      </h3>
+                      <p className="text-gray-400 text-sm">
+                        Login with your employee credentials into your company
+                        portal
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div className="flex items-start gap-6">
+                    <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-medium text-black">
+                      2
+                    </div>
+                    <div className="flex-1 pt-1">
+                      <h3 className="text-lg font-medium text-gray-100 mb-2">
+                        Select a Service
+                      </h3>
+                      <p className="text-gray-400 text-sm">
+                        Select the required medical services from our list of
+                        services tailored for corporate
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div className="flex items-start gap-6">
+                    <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-medium text-black">
+                      2
+                    </div>
+                    <div className="flex-1 pt-1">
+                      <h3 className="text-lg font-medium text-gray-100 mb-2">
+                        Appointment Booked
+                      </h3>
+                      <p className="text-gray-400 text-sm">
+                        Your appointment is booked and your doctor will be with
+                        you within minutes
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </motion.section>
 
           <motion.section className="flex h-full w-full max-w-screen-xl flex-col gap-8 justify-self-center p-3">

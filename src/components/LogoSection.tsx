@@ -22,63 +22,63 @@ import image002webp from "../../public/images/company-logos/image-002.webp";
 import Image from "next/image";
 
 export default function LogoSection() {
-    const logos = [
-      { src: image001jpg, alt: "Ecosia" },
-      { src: image002jpg, alt: "Flexible Services Digital" },
-      { src: image003jpg, alt: "AVIPRO" },
-      { src: image004jpg, alt: "asuri" },
-      { src: image005jpg, alt: "cfao" },
-      { src: image006jpg, alt: "DCDM Research" },
-      { src: image001png, alt: "ABC" },
-      { src: image002png, alt: "Constance Belle Mare Plage" },
-      { src: image003png, alt: "Europ Assistance" },
-      { src: image004png, alt: "FedEx" },
-      { src: image005png, alt: "frci" },
-      { src: image006png, alt: "IBL Together" },
-      { src: image007png, alt: "Jubilee Insurance" },
-      { src: image008png, alt: "KFC" },
-      { src: image009png, alt: "OASIS" },
-      { src: image010png, alt: "CASA FLORIDA" },
-      { src: image011png, alt: "Choisy Les Bains" },
-      { src: image001webp, alt: "CCA International" },
-      { src: image002webp, alt: "Pex" },
-    ];
-  
-    return (
-        <div className="mx-auto relative w-full overflow-hidden h-20">
-          <div
-            className="group flex overflow-hidden w-full h-full"
-            style={{
-              maskImage:
-                "linear-gradient(to right, transparent 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, transparent 100%)",
-            }}
-          >
-            <div className="flex animate-marquee-left group-hover:[animation-play-state:paused] whitespace-nowrap">
-              {logos.map((logo, index) => (
-                <Image
-                  key={index}
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-20 w-auto px-8"
-                  width={80}
-                  height={80}
-                  objectFit="contain"
-                />
-              ))}
-              {/* Duplicate set for seamless loop */}
-              {logos.map((logo, index) => (
-                <Image
-                  key={`duplicate-${index}`}
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-20 w-auto px-8"
-                  width={80}
-                  height={80}
-                  objectFit="contain"
-                />
-              ))}
-            </div>
-          </div>
+  const logos = [
+    { src: image001jpg, alt: "Ecosia" },
+    { src: image002jpg, alt: "Flexible Services Digital" },
+    { src: image003jpg, alt: "AVIPRO" },
+    { src: image004jpg, alt: "asuri" },
+    { src: image005jpg, alt: "cfao" },
+    { src: image006jpg, alt: "DCDM Research" },
+    { src: image001png, alt: "ABC" },
+    { src: image002png, alt: "Constance Belle Mare Plage" },
+    { src: image003png, alt: "Europ Assistance" },
+    { src: image004png, alt: "FedEx" },
+    { src: image005png, alt: "frci" },
+    { src: image006png, alt: "IBL Together" },
+    { src: image007png, alt: "Jubilee Insurance" },
+    { src: image008png, alt: "KFC" },
+    { src: image009png, alt: "OASIS" },
+    { src: image010png, alt: "CASA FLORIDA" },
+    { src: image011png, alt: "Choisy Les Bains" },
+    { src: image001webp, alt: "CCA International" },
+    { src: image002webp, alt: "Pex" },
+  ];
+
+  return (
+    <div className="mx-auto relative w-full overflow-hidden h-20">
+      <div
+        className="group flex overflow-hidden w-full h-full"
+        style={{
+          maskImage:
+            "linear-gradient(to right, transparent 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, transparent 100%)",
+        }}
+      >
+        <div className="flex animate-marquee-left group-hover:[animation-play-state:paused] whitespace-nowrap">
+          {logos.map((logo, index) => (
+            <Image
+              key={index}
+              src={logo.src}
+              alt={logo.alt}
+              className="h-20 w-auto px-8"
+              width={80}
+              height={80}
+              objectFit="contain"
+            />
+          ))}
+          {/* Duplicate set for seamless loop */}
+          {logos.map((logo, index) => (
+            <Image
+              key={`duplicate-${index}`}
+              src={logo.src}
+              alt={logo.alt}
+              className="h-20 w-auto px-8"
+              width={80}
+              height={80}
+              objectFit="contain"
+            />
+          ))}
         </div>
-      );
-    }
+      </div>
+    </div>
+  );
+}
