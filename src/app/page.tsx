@@ -16,6 +16,7 @@ import image001 from "../../public/images/image001.jpg";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import LogoSection from "@/components/LogoSection";
+import { journeyData } from "@/data/journeyData";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -204,24 +205,23 @@ export default function HomePage() {
 
           <motion.section
             ref={contactRef}
-            className={`w-full max-w-screen-xl justify-self-center ${!isPublic ? "" : "hidden"}`}
+            className="w-full max-w-screen-xl justify-self-center"
             initial="hidden"
             animate={contactInView ? "visible" : "hidden"}
             variants={containerVariants}
           >
-            <div className="max-w-8xl mx-auto flex flex-col md:flex-row gap-16 md:gap-12 bg-stone-800 text-white rounded-3xl w-full  p-20">
+            <div className="max-w-8xl mx-auto flex w-full flex-col gap-16 rounded-3xl bg-stone-800 p-20 text-white md:flex-row md:gap-12">
               {/* Left side content */}
               <motion.div
                 variants={itemVariants}
                 className="flex-1 flex items-center justify-center"
               >
-                <div className="md:sticky md:top-20">
+                <div className="md:top-20">
                   <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl mb-6">
-                    Your Corporate Care Journey
+                    {journeyData[isPublic ? "public" : "corporate"].title}
                   </h2>
                   <p className="text-gray-400 max-w-md">
-                    Reach out to us to book an appointment within minutes with
-                    our simple 3-step process
+                    {journeyData[isPublic ? "public" : "corporate"].subtitle}
                   </p>
                   <div className="mt-8">
                     <ActionButtons variant="bg-white" />
@@ -239,53 +239,23 @@ export default function HomePage() {
 
                 {/* Timeline Items */}
                 <div className="space-y-16 md:space-y-20">
-                  {/* Step 1 */}
-                  <div className="flex items-start gap-6">
-                    <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-medium text-black">
-                      1
-                    </div>
-                    <div className="flex-1 pt-1">
-                      <h3 className="text-lg font-medium text-gray-100 mb-2">
-                        Corporate Login
-                      </h3>
-                      <p className="text-gray-400 text-sm">
-                        Login with your employee credentials into your company
-                        portal
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Step 2 */}
-                  <div className="flex items-start gap-6">
-                    <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-medium text-black">
-                      2
-                    </div>
-                    <div className="flex-1 pt-1">
-                      <h3 className="text-lg font-medium text-gray-100 mb-2">
-                        Select a Service
-                      </h3>
-                      <p className="text-gray-400 text-sm">
-                        Select the required medical services from our list of
-                        services tailored for corporate
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Step 3 */}
-                  <div className="flex items-start gap-6">
-                    <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-medium text-black">
-                      2
-                    </div>
-                    <div className="flex-1 pt-1">
-                      <h3 className="text-lg font-medium text-gray-100 mb-2">
-                        Appointment Booked
-                      </h3>
-                      <p className="text-gray-400 text-sm">
-                        Your appointment is booked and your doctor will be with
-                        you within minutes
-                      </p>
-                    </div>
-                  </div>
+                  {journeyData[isPublic ? "public" : "corporate"].steps.map(
+                    (step, index) => (
+                      <div key={index} className="flex items-start gap-6">
+                        <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-medium text-black">
+                          {index + 1}
+                        </div>
+                        <div className="flex-1 pt-1">
+                          <h3 className="text-lg font-medium text-gray-100 mb-2">
+                            {step.title}
+                          </h3>
+                          <p className="text-gray-400 text-sm">
+                            {step.description}
+                          </p>
+                        </div>
+                      </div>
+                    ),
+                  )}
                 </div>
               </motion.div>
             </div>
