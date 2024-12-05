@@ -82,7 +82,7 @@ export default function Header({
           </div>
         </div>
 
-        <div className="relative mb-12 mt-4 flex w-full items-center justify-between px-12 pt-4 lg:hidden">
+        <div className="relative mb-12 mt-4 flex w-full items-center justify-between px-12 pb-5 pt-4 lg:hidden">
           <Link href="/" className="flex h-full items-center">
             <Image
               src={ImgLogo}
@@ -90,7 +90,7 @@ export default function Header({
                 // navigate to home page
               }}
               alt="Home Doctor Logo"
-              className="relative h-14 w-fit self-start"
+              className="relative h-10 w-fit self-start lg:h-14"
             />
           </Link>
           <Sheet>

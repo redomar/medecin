@@ -9,9 +9,7 @@ import { useInView } from "framer-motion";
 import * as motion from "framer-motion/client";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import team1 from "../../public/images/executive-team/team-1.png";
 import team2 from "../../public/images/executive-team/team-2.png";
-import team3 from "../../public/images/executive-team/team-3.png";
 import image001 from "../../public/images/image001.jpg";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -158,21 +156,6 @@ export default function HomePage() {
             >
               <div className="group relative overflow-hidden rounded-3xl">
                 <Image
-                  src={team1}
-                  alt="placeholder"
-                  width={500}
-                  height={500}
-                  className="w-full rounded-3xl object-cover transition-transform duration-300 group-hover:scale-110 md:h-[500px]"
-                />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 rounded-b-3xl bg-gradient-to-t from-black/70 to-transparent">
-                  <p className="absolute bottom-4 left-4 cursor-default text-xl font-semibold text-white">
-                    Dr. Mokshad Sharma, Director
-                  </p>
-                </div>
-              </div>
-
-              <div className="group relative overflow-hidden rounded-3xl">
-                <Image
                   src={team2}
                   alt="placeholder"
                   width={500}
@@ -182,21 +165,6 @@ export default function HomePage() {
                 <div className="absolute inset-x-0 bottom-0 h-1/3 rounded-b-3xl bg-gradient-to-t from-black/70 to-transparent">
                   <p className="absolute bottom-4 left-4 cursor-default text-xl font-semibold text-white">
                     Dr. Yasheel Aukhojee, CEO
-                  </p>
-                </div>
-              </div>
-
-              <div className="relative overflow-hidden rounded-3xl group">
-                <Image
-                  src={team3}
-                  alt="placeholder"
-                  width={500}
-                  height={500}
-                  className="w-full rounded-3xl object-cover transition-transform duration-300 group-hover:scale-110 md:h-[500px]"
-                />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 rounded-b-3xl bg-gradient-to-t from-black/70 to-transparent">
-                  <p className="absolute bottom-4 left-4 cursor-default text-xl font-semibold text-white">
-                    Dr. Khushyant Mungar, Director
                   </p>
                 </div>
               </div>
@@ -254,7 +222,7 @@ export default function HomePage() {
                           </p>
                         </div>
                       </div>
-                    ),
+                    )
                   )}
                 </div>
               </motion.div>
