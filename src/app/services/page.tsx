@@ -43,7 +43,7 @@ export default function ServicesPage() {
         animate="visible"
         variants={containerVariants}
       >
-        <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-[#ffd07e]/40 text-black">
+        <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-secondary/50 text-black">
           <motion.h1 className="text-5xl font-bold text-black">
             Our Services
           </motion.h1>

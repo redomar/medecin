@@ -75,37 +75,65 @@ export default function Header({
             <div className="absolute right-0 flex-shrink-0">
               <nav className="hidden justify-end font-medium md:items-center md:gap-5 lg:flex lg:gap-6">
                 <span className="cursor-pointer rounded-full bg-secondary px-8 py-3 text-lg font-semibold text-black shadow hover:bg-secondary/60 2xl:font-bold">
-                  Hotline: <Link href="tel:86121">86121</Link>
+                  {/* whatsapp://send?phone= */}
+                  <Link href="tel:86121">Hotline: 86121</Link>
                 </span>
               </nav>
             </div>
           </div>
         </div>
 
-        <div className="relative mb-12 mt-4 flex w-full items-center justify-between px-12 pb-5 pt-4 lg:hidden">
-          <Link href="/" className="flex h-full items-center">
-            <Image
-              src={ImgLogo}
-              onMouseDown={() => {
-                // navigate to home page
-              }}
-              alt="Home Doctor Logo"
-              className="relative h-10 w-fit self-start lg:h-14"
-            />
-          </Link>
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="shrink-0">
-                <Menu className="size-8" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="top">
-              <nav className="grid gap-6 text-lg font-medium">
-                <NavLinks />
-              </nav>
-            </SheetContent>
-          </Sheet>
+        <div className="relative mb-12  lg:hidden">
+          <div className="bg-[#ffd07e] px-8 py-1 text-black w-full ">
+            <div className="relative mx-auto flex w-full items-center">
+              <span className=" bg-[#ffdd9a] p-1 rounded-full">
+                <button
+                  className={`rounded-full px-3 py-1 text-sm transition-all ${
+                    isPublic ? "bg-white text-yellow-800" : "text-black"
+                  }`}
+                  onClick={() => setIsPublic(true)}
+                >
+                  Public
+                </button>
+                <button
+                  className={`rounded-full px-3 py-1 text-sm transition-all ${
+                    !isPublic ? "bg-white text-yellow-800" : "text-black"
+                  }`}
+                  onClick={() => setIsPublic(false)}
+                >
+                  Corporate
+                </button>
+              </span>
+              <span className=" absolute right-0 ">
+                <Link href="tel:193">Emergency: 193</Link>
+              </span>
+            </div>
+          </div>
+          <div className="flex w-full items-center justify-between  px-12 pb-5 pt-4">
+            <Link href="/" className="flex h-full items-center">
+              <Image
+                src={ImgLogo}
+                onMouseDown={() => {
+                  // navigate to home page
+                }}
+                alt="Home Doctor Logo"
+                className="relative h-10 w-fit self-start lg:h-14"
+              />
+            </Link>
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon" className="shrink-0">
+                  <Menu className="size-8" />
+                  <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="top">
+                <nav className="grid gap-6 text-lg font-medium">
+                  <NavLinks />
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>

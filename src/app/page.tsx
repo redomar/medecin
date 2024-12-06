@@ -138,12 +138,9 @@ export default function HomePage() {
           >
             <div className="w-full md:col-span-2 md:flex md:items-baseline md:justify-between lg:col-span-3">
               <span className="flex flex-col gap-3">
-                <h1 className="text-3xl font-medium lg:text-5xl">
-                  Our Leadership Team
-                </h1>
+                <h1 className="text-3xl font-medium lg:text-5xl">Our Leader</h1>
                 <span className="font-light text-gray-600">
-                  We are a team of experienced, and well-known professionals
-                  dedicated to bringing healthcare to you.
+                  Inpiring our team of experienced, and well-known professionals
                 </span>
               </span>
               <div className="flex justify-center gap-2">
@@ -152,7 +149,7 @@ export default function HomePage() {
             </div>
             <motion.div
               variants={itemVariants}
-              className="relative grid w-full grid-cols-1 gap-8 md:grid-cols-3"
+              className="relative grid w-full grid-cols-1 gap-8 md:grid-cols-2"
             >
               <div className="group relative overflow-hidden rounded-3xl">
                 <Image
@@ -165,6 +162,27 @@ export default function HomePage() {
                 <div className="absolute inset-x-0 bottom-0 h-1/3 rounded-b-3xl bg-gradient-to-t from-black/70 to-transparent">
                   <p className="absolute bottom-4 left-4 cursor-default text-xl font-semibold text-white">
                     Dr. Yasheel Aukhojee, CEO
+                  </p>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-3xl bg-secondary p-8 text-black">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">
+                    Dr. Yasheel Aukhojee, CEO
+                  </h3>
+                  <p className="text-gray-600 mb-4 text-lg">
+                    Dr. Yasheel Aukhojee leads our healthcare team with over 15
+                    years of dedicated service in medicine. Known for his
+                    patient-first approach and innovative vision in healthcare
+                    delivery, he has transformed how medical care is provided
+                    across Mauritius. His leadership style emphasizes
+                    compassion, accessibility, and excellence in patient care.
+                    Under his guidance, our team has pioneered several
+                    breakthrough initiatives in home healthcare services, making
+                    quality medical care more accessible to all Mauritians.
+                    Beyond his role as CEO, Dr. Aukhojee remains actively
+                    involved in patient care, embodying our commitment to
+                    hands-on, personalized medical services.
                   </p>
                 </div>
               </div>
@@ -203,7 +221,7 @@ export default function HomePage() {
                 className="relative flex-1 min-h-[400px] md:min-h-0"
               >
                 {/* Vertical Line */}
-                <div className="absolute left-[15px] top-0 h-5/6 w-[2px] bg-accent" />
+                <div className="absolute left-[15px] top-0 h-4/5 w-[2px] bg-accent" />
 
                 {/* Timeline Items */}
                 <div className="space-y-16 md:space-y-20">
@@ -222,7 +240,7 @@ export default function HomePage() {
                           </p>
                         </div>
                       </div>
-                    )
+                    ),
                   )}
                 </div>
               </motion.div>

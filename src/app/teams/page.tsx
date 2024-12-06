@@ -1,12 +1,12 @@
-// src/app/doctors/page.tsx
+// src/app/teams/page.tsx
 "use client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import * as motion from "framer-motion/client";
 import { useState } from "react";
 import ActionButtons from "@/components/ActionButtons";
+import { teamMembers } from "@/data/teamData";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -30,45 +30,6 @@ const itemVariants = {
   },
 };
 
-const doctors = [
-  {
-    name: "Dr. Emily Johnson",
-    specialty: "General Practice",
-    image: "https://picsum.photos/900/900/",
-    bio: "Dr. Johnson has over 15 years of experience in family medicine and is passionate about preventive care.",
-  },
-  {
-    name: "Dr. Michael Chen",
-    specialty: "Pediatrics",
-    image: "https://picsum.photos/900/901/",
-    bio: "Dr. Chen specializes in pediatric care and has a particular interest in childhood development and nutrition.",
-  },
-  {
-    name: "Dr. Sarah Patel",
-    specialty: "Internal Medicine",
-    image: "https://picsum.photos/901/900/",
-    bio: "Dr. Patel is an expert in managing chronic conditions and promoting overall wellness in adults.",
-  },
-  {
-    name: "Dr. David Kim",
-    specialty: "Geriatrics",
-    image: "https://picsum.photos/900/903/",
-    bio: "Dr. Kim focuses on providing compassionate care for older adults and managing age-related health concerns.",
-  },
-  {
-    name: "Dr. Francis Doe",
-    specialty: "Internal Medicine",
-    image: "https://picsum.photos/902/901/",
-    bio: "Dr. Patel is an expert in managing chronic conditions and promoting overall wellness in adults.",
-  },
-  {
-    name: "Dr. John Doherty",
-    specialty: "Family Medicine",
-    image: "https://picsum.photos/901/902/",
-    bio: "Dr. Patel is an expert in managing chronic conditions and promoting overall wellness in adults.",
-  },
-];
-
 export default function TeamsPage() {
   const [isPublic, setIsPublic] = useState(true);
   return (
@@ -81,45 +42,37 @@ export default function TeamsPage() {
         variants={containerVariants}
       >
         <div className="mx-auto max-w-screen-xl">
-          <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-yellow-200/30 text-black">
+          <div className="mx-auto mb-8 flex h-[500px] w-full max-w-screen-xl flex-col items-center justify-center gap-4 rounded-3xl bg-secondary/50 text-black">
             <motion.h1 className="text-5xl font-bold text-black">
               Our Team
             </motion.h1>
             <span className="flex max-w-screen-md flex-col gap-4 px-4 font-light text-gray-600">
-              {/* <p>
-                Our team of experienced doctors and healthcare experts follow
-                evidence-based medicine and international guidelines. Providing
-                personalised care wherever you are—at home, in the office, or on
-                the go. With our multilingual team, we ensure clear
-                communication and build stronger connections for optimal care.
-                We guarantee your health is in trusted hands, offering comfort,
-                convenience, and the highest quality of medical attention
-                whenever you need us.
-              </p> */}
+              {/* Add description if needed */}
             </span>
-            <ActionButtons toShowSecondButton={false} />
+            <ActionButtons
+              toShowSecondButton={false}
+              variant="bg-white text-yellow-800"
+            />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {doctors.map((doctor) => (
-              <motion.div key={doctor.name} variants={itemVariants}>
-                <Card className="h-full">
-                  <CardContent className="p-6 flex flex-col items-center">
-                    <Image
-                      src={doctor.image}
-                      alt={doctor.name}
-                      width={200}
-                      height={200}
-                      className="rounded-full mb-4"
-                    />
-                    <h2 className="text-xl font-semibold mb-2">
-                      {doctor.name}
-                    </h2>
-                    <h3 className="text-lg text-gray-600 mb-2">
-                      {doctor.specialty}
-                    </h3>
-                    <p className="text-gray-700 text-center">{doctor.bio}</p>
-                  </CardContent>
-                </Card>
+            {teamMembers.map((member) => (
+              <motion.div
+                key={member.id}
+                variants={itemVariants}
+                className="group relative overflow-hidden rounded-3xl"
+              >
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={500}
+                  height={500}
+                  className="w-full rounded-3xl object-cover transition-transform duration-300 group-hover:scale-110 md:h-[500px]"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 rounded-b-3xl bg-gradient-to-t from-black/70 to-transparent">
+                  <p className="absolute bottom-4 left-4 cursor-default text-xl font-semibold text-white">
+                    {member.name}, {member.role}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
